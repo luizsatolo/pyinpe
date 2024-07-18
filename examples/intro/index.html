@@ -1048,9 +1048,35 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">'Hello World!'</span><span class="p">)</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">pyinpe</span>
+<span class="kn">from</span> <span class="nn">pyinpe.WFS</span> <span class="kn">import</span> <span class="n">get_contents</span><span class="p">,</span> <span class="n">get_collectionSchema</span>
+
+<span class="c1"># Get collections at INPE's Queimadas WFS</span>
+<span class="n">get_contents</span><span class="p">()</span>
+
+<span class="c1"># Get schema of collection 'dados_abertos:focos_2023_br_satref' from INPE's Queimadas</span>
+<span class="n">get_collectionSchema</span><span class="p">()</span>
+
+<span class="c1"># Get collections at INPE's DETER Cerrado WFS</span>
+<span class="n">get_contents</span><span class="p">(</span><span class="n">database</span> <span class="o">=</span> <span class="s1">'deter_cerrado'</span><span class="p">)</span>
+
+<span class="c1"># Get schema of collection 'deter-cerrado:deter_cerrado' from INPE's DETER Cerrado</span>
+<span class="n">get_collectionSchema</span><span class="p">(</span><span class="n">database</span> <span class="o">=</span> <span class="s1">'deter_cerrado'</span><span class="p">,</span> <span class="n">collection</span> <span class="o">=</span> <span class="s1">'deter-cerrado:deter_cerrado'</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-1">print('Hello World!')</div>
+<div class="clipboard-copy-txt" id="cell-1">!pip install pyinpe
+from pyinpe.WFS import get_contents, get_collectionSchema
+
+# Get collections at INPE's Queimadas WFS
+get_contents()
+
+# Get schema of collection 'dados_abertos:focos_2023_br_satref' from INPE's Queimadas
+get_collectionSchema()
+
+# Get collections at INPE's DETER Cerrado WFS
+get_contents(database = 'deter_cerrado')
+
+# Get schema of collection 'deter-cerrado:deter_cerrado' from INPE's DETER Cerrado
+get_collectionSchema(database = 'deter_cerrado', collection = 'deter-cerrado:deter_cerrado')</div>
 </div>
 </div>
 </div>
@@ -1062,8 +1088,56 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Hello World!
+<pre>Requirement already satisfied: pyinpe in /opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages (0.0.2)
+Requirement already satisfied: numpy in /home/runner/.local/lib/python3.11/site-packages (from pyinpe) (2.0.0)
+Requirement already satisfied: owslib in /home/runner/.local/lib/python3.11/site-packages (from pyinpe) (0.31.0)
+Requirement already satisfied: lxml in /home/runner/.local/lib/python3.11/site-packages (from owslib-&gt;pyinpe) (5.2.2)
+Requirement already satisfied: python-dateutil&gt;=1.5 in /home/runner/.local/lib/python3.11/site-packages (from owslib-&gt;pyinpe) (2.9.0.post0)
+Requirement already satisfied: pytz in /home/runner/.local/lib/python3.11/site-packages (from owslib-&gt;pyinpe) (2024.1)
+Requirement already satisfied: pyyaml in /home/runner/.local/lib/python3.11/site-packages (from owslib-&gt;pyinpe) (6.0.1)
+Requirement already satisfied: requests&gt;=1.0 in /home/runner/.local/lib/python3.11/site-packages (from owslib-&gt;pyinpe) (2.32.3)
+Requirement already satisfied: six&gt;=1.5 in /home/runner/.local/lib/python3.11/site-packages (from python-dateutil&gt;=1.5-&gt;owslib-&gt;pyinpe) (1.16.0)
+Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /home/runner/.local/lib/python3.11/site-packages (from requests&gt;=1.0-&gt;owslib-&gt;pyinpe) (3.3.2)
 </pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Requirement already satisfied: idna&lt;4,&gt;=2.5 in /home/runner/.local/lib/python3.11/site-packages (from requests&gt;=1.0-&gt;owslib-&gt;pyinpe) (3.7)
+Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /home/runner/.local/lib/python3.11/site-packages (from requests&gt;=1.0-&gt;owslib-&gt;pyinpe) (2.2.2)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /home/runner/.local/lib/python3.11/site-packages (from requests&gt;=1.0-&gt;owslib-&gt;pyinpe) (2024.7.4)
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>pyproj not installed
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[1]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>{'properties': {'gid': 'string',
+  'classname': 'string',
+  'quadrant': 'string',
+  'path_row': 'string',
+  'view_date': 'date',
+  'created_date': 'date',
+  'sensor': 'string',
+  'satellite': 'string',
+  'areatotalkm': 'double',
+  'areauckm': 'double',
+  'uc': 'string',
+  'areamunkm': 'double',
+  'municipality': 'string',
+  'uf': 'string',
+  'publish_month': 'date'},
+ 'required': [],
+ 'geometry': '3D MultiPolygon',
+ 'geometry_column': 'st_multi'}</pre>
 </div>
 </div>
 </div>
@@ -1099,7 +1173,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-07-17T21:44:19+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-07-17</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-07-18T20:51:07+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-07-18</span>
   </span>
 
     
