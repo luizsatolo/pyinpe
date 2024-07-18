@@ -1,3 +1,6 @@
+import owslib
+from owslib.wfs import WebFeatureService
+
 # Object for WFS functions and parameters
 
 class WFS:
