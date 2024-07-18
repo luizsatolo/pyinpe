@@ -560,6 +560,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#pyinpe.pyinpe.get_contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_contents()
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -632,6 +641,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#pyinpe.pyinpe.get_contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_contents()
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -663,6 +681,57 @@
 
       <p>Main module.</p>
 
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="pyinpe.pyinpe.get_contents" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">get_contents</span><span class="p">(</span><span class="n">driver</span><span class="o">=</span><span class="s1">&#39;wfs&#39;</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="s1">&#39;2.0.0&#39;</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="s1">&#39;queimadas&#39;</span><span class="p">)</span></code>
+
+
+<a href="#pyinpe.pyinpe.get_contents" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Returns the contents of the database in the driver</p>
+
+        <details class="quote">
+          <summary>Source code in <code>pyinpe/pyinpe.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_contents</span><span class="p">(</span><span class="n">driver</span><span class="o">=</span><span class="s1">&#39;wfs&#39;</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="s1">&#39;2.0.0&#39;</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="s1">&#39;queimadas&#39;</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns the contents of the database in the driver</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">driver</span> <span class="o">==</span> <span class="s1">&#39;wfs&#39;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">database</span> <span class="o">==</span> <span class="s1">&#39;queimadas&#39;</span><span class="p">:</span>
+            <span class="n">wfs_url</span> <span class="o">=</span> <span class="s1">&#39;https://terrabrasilis.dpi.inpe.br/queimadas/geoserver/wfs&#39;</span>
+            <span class="n">wfs</span> <span class="o">=</span> <span class="n">WebFeatureService</span><span class="p">(</span><span class="n">wfs_url</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="n">version</span><span class="p">)</span>
+            <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="n">wfs</span><span class="o">.</span><span class="n">contents</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Database not found&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Driver not available&#39;</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+
+  </div>
 
     </div>
 
