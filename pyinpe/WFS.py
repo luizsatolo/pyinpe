@@ -1,8 +1,9 @@
 import owslib
 from owslib.wfs import WebFeatureService
+import geopandas as gpd
+import requests
 
 # Object for WFS functions and parameters
-
 class WFS:
 
   def __init__(self, version, database, collection=None):
@@ -43,3 +44,19 @@ def get_contents(version = '2.0.0', database = 'queimadas'):
 def get_collectionSchema(version = '2.0.0', database = 'queimadas', collection='dados_abertos:focos_2023_br_satref'):
   service = WFS(version, database, collection)
   return service.collection_schema()
+
+# Function to get a dataframe with items of DETER collections
+def get_deterWarnings(version = '2.0.0', database = 'deter_amz', srs = 'EPSG:4326', date_range = ['2021-01-01', '2021-02-28']):
+  start_date = date_range[0]
+  end_date = date_range[1]
+  if database == 'deter_amz':
+    database = 'deter-amz/deter_amz'
+    typename = 'deter-amz:deter_amz'
+  elif database == 'deter_cerrado':
+    database = 'deter-cerrado/deter_cerrado'
+    typename = 'deter-cerrado:deter_cerrado'
+  url = 'https://terrabrasilis.dpi.inpe.br/geoserver/'+database+'/wfs?service=WFS&version=2.0.0&srsName=EPSG:4326&request=GetFeature&typeName='+typename+'&CQL_FILTER=view_date%20BETWEEN%20%27'+start_date+'%27%20AND%20%27'+end_date+'%27&outputFormat=json&sortBy=gid&startIndex=0'
+  r = requests.get(url)
+  j = r.json()
+  df = gpd.GeoDataFrame.from_features(j)
+  return df

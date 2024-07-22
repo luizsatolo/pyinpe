@@ -1,2 +1,4 @@
 numpy
 owslib
+geopandas
+requests
