@@ -1048,34 +1048,57 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">pyinpe</span>
-<span class="kn">from</span> <span class="nn">pyinpe.WFS</span> <span class="kn">import</span> <span class="n">get_contents</span><span class="p">,</span> <span class="n">get_collectionSchema</span>
-
-<span class="c1"># Get collections at INPE's Queimadas WFS</span>
-<span class="n">get_contents</span><span class="p">()</span>
-
-<span class="c1"># Get schema of collection 'dados_abertos:focos_2023_br_satref' from INPE's Queimadas</span>
-<span class="n">get_collectionSchema</span><span class="p">()</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">pyinpe</span> <span class="o">-</span><span class="n">q</span>
+<span class="kn">from</span> <span class="nn">pyinpe.WFS</span> <span class="kn">import</span> <span class="n">get_contents</span><span class="p">,</span> <span class="n">get_collectionSchema</span><span class="p">,</span> <span class="n">get_deterWarnings</span>
 
 <span class="c1"># Get collections at INPE's DETER Cerrado WFS</span>
 <span class="n">get_contents</span><span class="p">(</span><span class="n">database</span> <span class="o">=</span> <span class="s1">'deter_cerrado'</span><span class="p">)</span>
-
-<span class="c1"># Get schema of collection 'deter-cerrado:deter_cerrado' from INPE's DETER Cerrado</span>
-<span class="n">get_collectionSchema</span><span class="p">(</span><span class="n">database</span> <span class="o">=</span> <span class="s1">'deter_cerrado'</span><span class="p">,</span> <span class="n">collection</span> <span class="o">=</span> <span class="s1">'deter-cerrado:deter_cerrado'</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-1">!pip install pyinpe
-from pyinpe.WFS import get_contents, get_collectionSchema
-
-# Get collections at INPE's Queimadas WFS
-get_contents()
-
-# Get schema of collection 'dados_abertos:focos_2023_br_satref' from INPE's Queimadas
-get_collectionSchema()
+<div class="clipboard-copy-txt" id="cell-1">!pip install pyinpe -q
+from pyinpe.WFS import get_contents, get_collectionSchema, get_deterWarnings
 
 # Get collections at INPE's DETER Cerrado WFS
-get_contents(database = 'deter_cerrado')
-
-# Get schema of collection 'deter-cerrado:deter_cerrado' from INPE's DETER Cerrado
+get_contents(database = 'deter_cerrado')</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[1]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>['deter-cerrado:deter_cerrado']</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy for="cell-2">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Get schema of collection 'deter-cerrado:deter_cerrado' from INPE's DETER Cerrado</span>
+<span class="n">get_collectionSchema</span><span class="p">(</span><span class="n">database</span> <span class="o">=</span> <span class="s1">'deter_cerrado'</span><span class="p">,</span> <span class="n">collection</span> <span class="o">=</span> <span class="s1">'deter-cerrado:deter_cerrado'</span><span class="p">)</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-2"># Get schema of collection 'deter-cerrado:deter_cerrado' from INPE's DETER Cerrado
 get_collectionSchema(database = 'deter_cerrado', collection = 'deter-cerrado:deter_cerrado')</div>
 </div>
 </div>
@@ -1085,34 +1108,8 @@ get_collectionSchema(database = 'deter_cerrado', collection = 'deter-cerrado:det
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Requirement already satisfied: pyinpe in /opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages (0.0.3)
-Requirement already satisfied: numpy in /home/runner/.local/lib/python3.11/site-packages (from pyinpe) (2.0.0)
-Requirement already satisfied: owslib in /home/runner/.local/lib/python3.11/site-packages (from pyinpe) (0.31.0)
-Requirement already satisfied: lxml in /home/runner/.local/lib/python3.11/site-packages (from owslib-&gt;pyinpe) (5.2.2)
-Requirement already satisfied: python-dateutil&gt;=1.5 in /home/runner/.local/lib/python3.11/site-packages (from owslib-&gt;pyinpe) (2.9.0.post0)
-Requirement already satisfied: pytz in /home/runner/.local/lib/python3.11/site-packages (from owslib-&gt;pyinpe) (2024.1)
-Requirement already satisfied: pyyaml in /home/runner/.local/lib/python3.11/site-packages (from owslib-&gt;pyinpe) (6.0.1)
-Requirement already satisfied: requests&gt;=1.0 in /home/runner/.local/lib/python3.11/site-packages (from owslib-&gt;pyinpe) (2.32.3)
-Requirement already satisfied: six&gt;=1.5 in /home/runner/.local/lib/python3.11/site-packages (from python-dateutil&gt;=1.5-&gt;owslib-&gt;pyinpe) (1.16.0)
-Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /home/runner/.local/lib/python3.11/site-packages (from requests&gt;=1.0-&gt;owslib-&gt;pyinpe) (3.3.2)
-Requirement already satisfied: idna&lt;4,&gt;=2.5 in /home/runner/.local/lib/python3.11/site-packages (from requests&gt;=1.0-&gt;owslib-&gt;pyinpe) (3.7)
-Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /home/runner/.local/lib/python3.11/site-packages (from requests&gt;=1.0-&gt;owslib-&gt;pyinpe) (2.2.2)
-Requirement already satisfied: certifi&gt;=2017.4.17 in /home/runner/.local/lib/python3.11/site-packages (from requests&gt;=1.0-&gt;owslib-&gt;pyinpe) (2024.7.4)
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>pyproj not installed
-</pre>
-</div>
-</div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[1]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>{'properties': {'gid': 'string',
   'classname': 'string',
@@ -1132,6 +1129,306 @@ Requirement already satisfied: certifi&gt;=2017.4.17 in /home/runner/.local/lib/
  'required': [],
  'geometry': '3D MultiPolygon',
  'geometry_column': 'st_multi'}</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy for="cell-3">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">get_deterWarnings</span><span class="p">(</span><span class="n">database</span> <span class="o">=</span> <span class="s1">'deter_cerrado'</span><span class="p">,</span> <span class="n">date_range</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'2021-01-01'</span><span class="p">,</span> <span class="s1">'2021-02-28'</span><span class="p">])</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-3">get_deterWarnings(database = 'deter_cerrado', date_range = ['2021-01-01', '2021-02-28'])</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>geometry</th>
+<th>gid</th>
+<th>classname</th>
+<th>quadrant</th>
+<th>path_row</th>
+<th>view_date</th>
+<th>created_date</th>
+<th>sensor</th>
+<th>satellite</th>
+<th>areatotalkm</th>
+<th>areauckm</th>
+<th>uc</th>
+<th>areamunkm</th>
+<th>municipality</th>
+<th>uf</th>
+<th>publish_month</th>
+<th>bbox</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>MULTIPOLYGON (((-44.9222 -7.2383, -44.9211 -7....</td>
+<td>3263_curr</td>
+<td>DESMATAMENTO_CR</td>
+<td>None</td>
+<td>157_111</td>
+<td>2021-01-23Z</td>
+<td>2021-01-25Z</td>
+<td>AWFI</td>
+<td>CBERS-4</td>
+<td>1.029233</td>
+<td>0.0</td>
+<td>None</td>
+<td>1.029233</td>
+<td>São Félix de Balsas</td>
+<td>MA</td>
+<td>2021-01-01Z</td>
+<td>[-44.9222, -7.2601, -44.9149, -7.2383]</td>
+</tr>
+<tr>
+<th>1</th>
+<td>MULTIPOLYGON (((-46.0087 -19.4307, -46.0085 -1...</td>
+<td>3269_curr</td>
+<td>DESMATAMENTO_CR</td>
+<td>None</td>
+<td>158_123</td>
+<td>2021-01-20Z</td>
+<td>2021-01-21Z</td>
+<td>AWFI</td>
+<td>CBERS-4</td>
+<td>0.083703</td>
+<td>0.0</td>
+<td>None</td>
+<td>0.083703</td>
+<td>São Gotardo</td>
+<td>MG</td>
+<td>2021-01-01Z</td>
+<td>[-46.0114, -19.4347, -46.0067, -19.4307]</td>
+</tr>
+<tr>
+<th>2</th>
+<td>MULTIPOLYGON (((-45.9831 -7.1826, -45.9833 -7....</td>
+<td>3282_curr</td>
+<td>DESMATAMENTO_CR</td>
+<td>None</td>
+<td>154_111</td>
+<td>2021-02-01Z</td>
+<td>2021-02-02Z</td>
+<td>AWFI</td>
+<td>CBERS-4</td>
+<td>0.847263</td>
+<td>0.0</td>
+<td>None</td>
+<td>0.847263</td>
+<td>Fortaleza dos Nogueiras</td>
+<td>MA</td>
+<td>2021-02-01Z</td>
+<td>[-45.9857, -7.1981, -45.97, -7.1826]</td>
+</tr>
+<tr>
+<th>3</th>
+<td>MULTIPOLYGON (((-46.085 -5.5669, -46.0838 -5.5...</td>
+<td>3284_curr</td>
+<td>DESMATAMENTO_CR</td>
+<td>None</td>
+<td>162_105</td>
+<td>2021-02-03Z</td>
+<td>2021-02-04Z</td>
+<td>AWFI</td>
+<td>CBERS-4</td>
+<td>0.157581</td>
+<td>0.0</td>
+<td>None</td>
+<td>0.157581</td>
+<td>Grajaú</td>
+<td>MA</td>
+<td>2021-02-01Z</td>
+<td>[-46.0896, -5.5761, -46.0838, -5.5669]</td>
+</tr>
+<tr>
+<th>4</th>
+<td>MULTIPOLYGON (((-44.9177 -7.2439, -44.9174 -7....</td>
+<td>3293_curr</td>
+<td>DESMATAMENTO_CR</td>
+<td>None</td>
+<td>157_111</td>
+<td>2021-01-23Z</td>
+<td>2021-01-25Z</td>
+<td>AWFI</td>
+<td>CBERS-4</td>
+<td>0.088353</td>
+<td>0.0</td>
+<td>None</td>
+<td>0.088353</td>
+<td>São Félix de Balsas</td>
+<td>MA</td>
+<td>2021-01-01Z</td>
+<td>[-44.9177, -7.2476, -44.9133, -7.2414]</td>
+</tr>
+<tr>
+<th>...</th>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<th>662</th>
+<td>MULTIPOLYGON (((-59.7359 -13.8608, -59.7351 -1...</td>
+<td>5534_curr</td>
+<td>DESMATAMENTO_CR</td>
+<td>None</td>
+<td>172_117</td>
+<td>2021-02-25Z</td>
+<td>2021-02-26Z</td>
+<td>AWFI</td>
+<td>CBERS-4</td>
+<td>0.589032</td>
+<td>0.0</td>
+<td>None</td>
+<td>0.589032</td>
+<td>Comodoro</td>
+<td>MT</td>
+<td>2021-02-01Z</td>
+<td>[-59.7359, -13.8695, -59.725, -13.8578]</td>
+</tr>
+<tr>
+<th>663</th>
+<td>MULTIPOLYGON (((-59.5703 -14.0521, -59.5694 -1...</td>
+<td>5536_curr</td>
+<td>DESMATAMENTO_CR</td>
+<td>None</td>
+<td>172_117</td>
+<td>2021-02-25Z</td>
+<td>2021-02-26Z</td>
+<td>AWFI</td>
+<td>CBERS-4</td>
+<td>0.590256</td>
+<td>0.0</td>
+<td>None</td>
+<td>0.590256</td>
+<td>Nova Lacerda</td>
+<td>MT</td>
+<td>2021-02-01Z</td>
+<td>[-59.5708, -14.0606, -59.5599, -14.051]</td>
+</tr>
+<tr>
+<th>664</th>
+<td>MULTIPOLYGON (((-47.8913 -11.8975, -47.8913 -1...</td>
+<td>5537_curr</td>
+<td>DESMATAMENTO_CR</td>
+<td>None</td>
+<td>155_111</td>
+<td>2021-02-24Z</td>
+<td>2021-02-25Z</td>
+<td>AWFI</td>
+<td>CBERS-4</td>
+<td>1.880644</td>
+<td>0.0</td>
+<td>None</td>
+<td>1.880644</td>
+<td>São Valério</td>
+<td>TO</td>
+<td>2021-02-01Z</td>
+<td>[-47.8913, -11.9049, -47.8623, -11.8933]</td>
+</tr>
+<tr>
+<th>665</th>
+<td>MULTIPOLYGON (((-59.7351 -13.8498, -59.7347 -1...</td>
+<td>5538_curr</td>
+<td>DESMATAMENTO_CR</td>
+<td>None</td>
+<td>172_117</td>
+<td>2021-02-25Z</td>
+<td>2021-02-26Z</td>
+<td>AWFI</td>
+<td>CBERS-4</td>
+<td>1.429386</td>
+<td>0.0</td>
+<td>None</td>
+<td>1.429386</td>
+<td>Comodoro</td>
+<td>MT</td>
+<td>2021-02-01Z</td>
+<td>[-59.7351, -13.8588, -59.7151, -13.8468]</td>
+</tr>
+<tr>
+<th>666</th>
+<td>MULTIPOLYGON (((-44.4528 -10.7767, -44.4528 -1...</td>
+<td>818_curr</td>
+<td>DESMATAMENTO_CR</td>
+<td>None</td>
+<td>157_111</td>
+<td>2021-01-23Z</td>
+<td>2021-01-25Z</td>
+<td>AWFI</td>
+<td>CBERS-4</td>
+<td>0.048456</td>
+<td>0.0</td>
+<td>None</td>
+<td>0.048456</td>
+<td>Santa Rita de Cássia</td>
+<td>BA</td>
+<td>2021-01-01Z</td>
+<td>[-44.4561, -10.778, -44.4528, -10.7766]</td>
+</tr>
+</tbody>
+</table>
+<p>667 rows × 17 columns</p>
+</div>
 </div>
 </div>
 </div>
@@ -1167,7 +1464,7 @@ Requirement already satisfied: certifi&gt;=2017.4.17 in /home/runner/.local/lib/
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-07-18T20:51:07+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-07-18</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-07-22T20:29:59+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-07-22</span>
   </span>
 
     
