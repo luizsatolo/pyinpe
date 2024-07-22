@@ -2,5 +2,3 @@ numpy
 owslib
 geopandas
 requests
-datetime
-dateutil

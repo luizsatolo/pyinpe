@@ -2,8 +2,6 @@ import owslib
 from owslib.wfs import WebFeatureService
 import geopandas as gpd
 import requests
-import datetime
-import dateutil.relativedelta
 
 # Object for WFS functions and parameters
 class WFS:
@@ -47,14 +45,8 @@ def get_collectionSchema(version = '2.0.0', database = 'queimadas', collection='
   service = WFS(version, database, collection)
   return service.collection_schema()
 
-# Relative parameter for querying
-d1 = datetime.date.today()
-d2 = d1 - dateutil.relativedelta.relativedelta(months=1)
-start_date = str(d2)
-end_date = str(d1)
-
 # Function to get a dataframe with items of DETER collections
-def get_deterWarnings(version = '2.0.0', database = 'deter_amz', srs = 'EPSG:4326', date_range = [start_date, end_date]):
+def get_deterWarnings(version = '2.0.0', database = 'deter_amz', srs = 'EPSG:4326', date_range = ['2021-01-01', '2021-02-28']):
   start_date = date_range[0]
   end_date = date_range[1]
   if database == 'deter_amz':
