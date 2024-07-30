@@ -1,5 +1,6 @@
 import requests
 import geopandas as gpd
+import shapely as shp
 
 def connectDeter() -> str:
   """
@@ -17,6 +18,7 @@ def connectDeter() -> str:
   except:
     return print('DETER Cerrado WFS is currently unavailable. Please, try again later.')
   
+# Function to get a dataframe with items of DETER collections
 def getAlerts(spatial_filter: int|str|list|None = None, temporal_filter: str = ['2021-01-01', '2021-06-30'], alert_type: str|None = None) -> gpd.GeoDataFrame:
   """
   Get alerts from Deter Cerrado WFS.
@@ -29,13 +31,21 @@ def getAlerts(spatial_filter: int|str|list|None = None, temporal_filter: str = [
    """
   get_location = spatial_filter 
   if isinstance(get_location, str):
-    if '-' in get_location:
+    if ' - ' in get_location:
+      spatial_query = 'city_name'
       location = 'municipality=%27'+get_location.split('-')[0].strip()+'%27%20AND%20uf=%27'+get_location.split('-')[1].strip()+'%27%20AND%20'
+    elif 'POLYGON' in get_location:
+      spatial_query = 'polygon'
+      s = gpd.GeoSeries.from_wkt([get_location])
+      location = 'BBOX(st_multi,'+str(s[0].bounds).replace('(','').replace(')','').replace(' ','')+',%27EPSG:4674%27)%20AND%20'
     else:
+      spatial_query = 'invalid'
       location = ''
   elif isinstance(get_location, list):
+    spatial_query = 'bbox'
     location = 'BBOX(st_multi,'+str(get_location).replace('[','').replace(']','').replace(' ','')+',%27EPSG:4674%27)%20AND%20'
   else:
+    spatial_query = 'none'
     location = ''
   start_date = temporal_filter[0]
   end_date = temporal_filter[1]
@@ -50,4 +60,7 @@ def getAlerts(spatial_filter: int|str|list|None = None, temporal_filter: str = [
   r = requests.get(url)
   j = r.json()
   df = gpd.GeoDataFrame.from_features(j)
-  return df
+  if spatial_query == 'polygon':
+    return df.loc[df.overlaps(shp.from_wkt(get_location))].reset_index(drop=True)
+  else:
+    return df
