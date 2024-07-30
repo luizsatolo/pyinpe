@@ -1,6 +1,8 @@
 import requests
 import geopandas as gpd
 import shapely as shp
+import os
+import pandas as pd
 
 def connectDeter() -> str:
   """
@@ -64,3 +66,9 @@ def getAlerts(spatial_filter: int|str|list|None = None, temporal_filter: str = [
     return df.loc[df.overlaps(shp.from_wkt(get_location))].reset_index(drop=True)
   else:
     return df
+  
+# Test function to get IBGE geocodes
+def getGeocode():
+  my_path = os.path.dirname(os.path.realpath(__file__))
+  my_file = os.path.join(my_path, 'geocode', 'geocode.csv')
+  return pd.read_csv('geocode.csv', index_col = 'index')
