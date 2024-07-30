@@ -1257,10 +1257,10 @@ getAlerts(spatial_filter='Posse - GO', temporal_filter=['2020-01-01', '2020-12-3
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Get a geodataframe for a bounding box [x_min, y_min, x_max, y_max]</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Get a geodataframe with alerts for a bounding box [x_min, y_min, x_max, y_max]</span>
 <span class="n">getAlerts</span><span class="p">(</span><span class="n">spatial_filter</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">53.5</span><span class="p">,</span><span class="o">-</span><span class="mi">21</span><span class="p">,</span><span class="o">-</span><span class="mi">53</span><span class="p">,</span><span class="o">-</span><span class="mf">20.5</span><span class="p">])</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-3"># Get a geodataframe for a bounding box [x_min, y_min, x_max, y_max]
+<div class="clipboard-copy-txt" id="cell-3"># Get a geodataframe with alerts for a bounding box [x_min, y_min, x_max, y_max]
 getAlerts(spatial_filter = [-53.5,-21,-53,-20.5])</div>
 </div>
 </div>
@@ -1459,6 +1459,107 @@ getAlerts(spatial_filter = [-53.5,-21,-53,-20.5])</div>
 </div>
 </div>
 </div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy for="cell-4">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Get a geodataframe with alerts that overlaps a WKT geometry</span>
+<span class="n">getAlerts</span><span class="p">(</span><span class="n">spatial_filter</span> <span class="o">=</span> <span class="s1">'POLYGON ((-46.3 -14.3, -46.2 -14.2, -46.2 -14.3, -46.3 -14.3))'</span><span class="p">,</span> <span class="n">temporal_filter</span><span class="o">=</span><span class="p">[</span><span class="s1">'2020-01-01'</span><span class="p">,</span> <span class="s1">'2024-12-31'</span><span class="p">])</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-4"># Get a geodataframe with alerts that overlaps a WKT geometry
+getAlerts(spatial_filter = 'POLYGON ((-46.3 -14.3, -46.2 -14.2, -46.2 -14.3, -46.3 -14.3))', temporal_filter=['2020-01-01', '2024-12-31'])</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>geometry</th>
+<th>gid</th>
+<th>classname</th>
+<th>quadrant</th>
+<th>path_row</th>
+<th>view_date</th>
+<th>created_date</th>
+<th>sensor</th>
+<th>satellite</th>
+<th>areatotalkm</th>
+<th>areauckm</th>
+<th>uc</th>
+<th>areamunkm</th>
+<th>municipality</th>
+<th>uf</th>
+<th>publish_month</th>
+<th>bbox</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>MULTIPOLYGON (((-46.2746 -14.2509, -46.265 -14...</td>
+<td>1182_curr</td>
+<td>DESMATAMENTO_CR</td>
+<td>None</td>
+<td>160_117</td>
+<td>2021-10-27Z</td>
+<td>2021-10-29Z</td>
+<td>AWFI</td>
+<td>CBERS-4</td>
+<td>2.792003</td>
+<td>2.792003</td>
+<td>ÁREA DE PROTEÇÃO AMBIENTAL DAS NASCENTES DO RI...</td>
+<td>2.792003</td>
+<td>Posse</td>
+<td>GO</td>
+<td>2021-10-01Z</td>
+<td>[-46.2746, -14.2578, -46.2511, -14.2366]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div> <!-- jp-Notebook -->
 </div> <!-- jupyter-wrapper -->
@@ -1489,7 +1590,7 @@ getAlerts(spatial_filter = [-53.5,-21,-53,-20.5])</div>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-07-29T20:28:03+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-07-29</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-07-30T18:23:23+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-07-30</span>
   </span>
 
     
