@@ -1,5 +1,4 @@
 geopandas
 requests
 shapely
-os
 pandas
