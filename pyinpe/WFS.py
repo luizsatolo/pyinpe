@@ -70,5 +70,5 @@ def getAlerts(spatial_filter: int|str|list|None = None, temporal_filter: str = [
 # Test function to get IBGE geocodes
 def getGeocode():
   my_path = os.path.dirname(os.path.realpath(__file__))
-  my_file = os.path.join(my_path, 'geocode', 'geocode.csv')
+  my_file = os.path.join(my_path, '__assets__', 'geocode.csv')
   return pd.read_csv('geocode.csv', index_col = 'index')
