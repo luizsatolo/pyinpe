@@ -43,6 +43,9 @@ extra = [
 include = ["pyinpe*"]
 exclude = ["docs*"]
 
+[tool.setuptools.package-data]
+"*" = ["*.*"]
+
 [tool.setuptools.dynamic]
 dependencies = {file = ["requirements.txt"]}
 
