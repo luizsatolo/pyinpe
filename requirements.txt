@@ -2,3 +2,4 @@ geopandas
 requests
 shapely
 pandas
+pkg_resources
