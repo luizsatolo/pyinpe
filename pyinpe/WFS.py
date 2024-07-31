@@ -1,7 +1,7 @@
 import requests
 import geopandas as gpd
 import shapely as shp
-import os
+import pkg_resources
 import pandas as pd
 
 def connectDeter() -> str:
@@ -31,8 +31,15 @@ def getAlerts(spatial_filter: int|str|list|None = None, temporal_filter: str = [
   :return: a geopandas GeoDataFrame with the alerts
   :rtype: gpd.GeoDataFrame
    """
-  get_location = spatial_filter 
-  if isinstance(get_location, str):
+  get_location = spatial_filter
+  if isinstance(get_location, int):
+    spatial_query = 'geocode'
+    CSV_FILE = pkg_resources.resource_filename('pyinpe', '__assets__/geocode.csv')
+    df_geocode = pd.read_csv(CSV_FILE, index_col = 'index').reset_index(drop = True)
+    city = df_geocode.NM_MUN[df_geocode.CD_MUN == get_location].item()
+    uf = df_geocode.SIGLA_UF[df_geocode.CD_MUN == get_location].item()
+    location = 'municipality=%27'+city+'%27%20AND%20uf=%27'+uf+'%27%20AND%20'
+  elif isinstance(get_location, str):
     if ' - ' in get_location:
       spatial_query = 'city_name'
       location = 'municipality=%27'+get_location.split('-')[0].strip()+'%27%20AND%20uf=%27'+get_location.split('-')[1].strip()+'%27%20AND%20'
@@ -66,9 +73,3 @@ def getAlerts(spatial_filter: int|str|list|None = None, temporal_filter: str = [
     return df.loc[df.overlaps(shp.from_wkt(get_location))].reset_index(drop=True)
   else:
     return df
-  
-# Test function to get IBGE geocodes
-def getGeocode():
-  my_path = os.path.dirname(os.path.realpath(__file__))
-  my_file = os.path.join(my_path, '__assets__', 'geocode.csv')
-  return pd.read_csv('geocode.csv', index_col = 'index')
