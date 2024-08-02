@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
     
     
       
@@ -1096,10 +1096,10 @@ connectDeter('Cerrado')</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Get a geodataframe with alerts for the city of Posse, Goias in 2020</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Get a geodataframe with alerts in the city of Posse, Goias in 2020</span>
 <span class="n">getAlerts</span><span class="p">(</span><span class="n">spatial_filter</span><span class="o">=</span><span class="s1">'Posse - GO'</span><span class="p">,</span> <span class="n">temporal_filter</span><span class="o">=</span><span class="p">[</span><span class="s1">'2020-01-01'</span><span class="p">,</span> <span class="s1">'2020-12-31'</span><span class="p">])</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-2"># Get a geodataframe with alerts for the city of Posse, Goias in 2020
+<div class="clipboard-copy-txt" id="cell-2"># Get a geodataframe with alerts in the city of Posse, Goias in 2020
 getAlerts(spatial_filter='Posse - GO', temporal_filter=['2020-01-01', '2020-12-31'])</div>
 </div>
 </div>
@@ -1378,10 +1378,10 @@ getAlerts(spatial_filter=5002308) </div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Get a geodataframe with alerts for a bounding box [x_min, y_min, x_max, y_max]</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Get a geodataframe with alerts within a bounding box [x_min, y_min, x_max, y_max]</span>
 <span class="n">getAlerts</span><span class="p">(</span><span class="n">spatial_filter</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">53.5</span><span class="p">,</span><span class="o">-</span><span class="mi">21</span><span class="p">,</span><span class="o">-</span><span class="mi">53</span><span class="p">,</span><span class="o">-</span><span class="mf">20.5</span><span class="p">])</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-4"># Get a geodataframe with alerts for a bounding box [x_min, y_min, x_max, y_max]
+<div class="clipboard-copy-txt" id="cell-4"># Get a geodataframe with alerts within a bounding box [x_min, y_min, x_max, y_max]
 getAlerts(spatial_filter = [-53.5,-21,-53,-20.5])</div>
 </div>
 </div>
@@ -2314,6 +2314,3108 @@ connectDeter('Amazonia')</div>
 </div>
 </div>
 </div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy for="cell-8">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">pyinpe.WFS</span> <span class="kn">import</span> <span class="n">connectQueimadas</span><span class="p">,</span> <span class="n">getFires</span>
+
+<span class="c1"># Connect to INPE's Queimadas WFS</span>
+<span class="n">connectQueimadas</span><span class="p">()</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-8">from pyinpe.WFS import connectQueimadas, getFires
+
+# Connect to INPE's Queimadas WFS
+connectQueimadas()</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Connected to Queimadas WFS.
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy for="cell-9">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Get a geodataframe with fires in the city of Colniza, Mato Grosso</span>
+<span class="n">getFires</span><span class="p">(</span><span class="n">spatial_filter</span> <span class="o">=</span> <span class="s1">'Colniza - MT'</span><span class="p">)</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-9"># Get a geodataframe with fires in the city of Colniza, Mato Grosso
+getFires(spatial_filter = 'Colniza - MT')</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>geometry</th>
+<th>id_foco_bdq</th>
+<th>foco_id</th>
+<th>longitude</th>
+<th>latitude</th>
+<th>data_hora_gmt</th>
+<th>data_pas</th>
+<th>satelite</th>
+<th>municipio</th>
+<th>estado</th>
+<th>...</th>
+<th>numero_dias_sem_chuva</th>
+<th>risco_fogo</th>
+<th>bioma</th>
+<th>id_0</th>
+<th>id_1</th>
+<th>id_2</th>
+<th>continente_id</th>
+<th>vegetacao</th>
+<th>frp</th>
+<th>bbox</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>POINT (-60.92955 -9.28597)</td>
+<td>1704370697</td>
+<td>2f6c0c43-dfab-3c7c-b8c3-8990a355e1e7</td>
+<td>-60.92955</td>
+<td>-9.28597</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>COLNIZA</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>66.0</td>
+<td>0.91</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5103254</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>23.5</td>
+<td>[-60.92955, -9.28597, -60.92955, -9.28597]</td>
+</tr>
+<tr>
+<th>1</th>
+<td>POINT (-60.931 -9.18731)</td>
+<td>1704370698</td>
+<td>e7799c1e-cc99-3cdb-8054-49eeb7fbee05</td>
+<td>-60.93100</td>
+<td>-9.18731</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>COLNIZA</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>69.0</td>
+<td>0.88</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5103254</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>36.0</td>
+<td>[-60.931, -9.18731, -60.931, -9.18731]</td>
+</tr>
+<tr>
+<th>2</th>
+<td>POINT (-60.92728 -9.18034)</td>
+<td>1704370699</td>
+<td>80eeb8b4-0864-328d-80cb-d3be20876cec</td>
+<td>-60.92728</td>
+<td>-9.18034</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>COLNIZA</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>69.0</td>
+<td>0.88</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5103254</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>43.8</td>
+<td>[-60.92728, -9.18034, -60.92728, -9.18034]</td>
+</tr>
+<tr>
+<th>3</th>
+<td>POINT (-59.66762 -9.17666)</td>
+<td>1704370700</td>
+<td>f4571c9d-b1b5-318c-8fdd-eb1709f49d54</td>
+<td>-59.66762</td>
+<td>-9.17666</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>COLNIZA</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>58.0</td>
+<td>0.84</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5103254</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>219.7</td>
+<td>[-59.66762, -9.17666, -59.66762, -9.17666]</td>
+</tr>
+<tr>
+<th>4</th>
+<td>POINT (-60.88185 -9.17472)</td>
+<td>1704370701</td>
+<td>6494d68b-0345-3480-a49c-7179eaaa2aad</td>
+<td>-60.88185</td>
+<td>-9.17472</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>COLNIZA</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>69.0</td>
+<td>0.89</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5103254</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>167.3</td>
+<td>[-60.88185, -9.17472, -60.88185, -9.17472]</td>
+</tr>
+<tr>
+<th>5</th>
+<td>POINT (-59.64978 -9.1743)</td>
+<td>1704370702</td>
+<td>3ccb7e94-6ab5-3140-b00c-6b1adea8eb87</td>
+<td>-59.64978</td>
+<td>-9.17430</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>COLNIZA</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>58.0</td>
+<td>0.85</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5103254</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>134.5</td>
+<td>[-59.64978, -9.1743, -59.64978, -9.1743]</td>
+</tr>
+<tr>
+<th>6</th>
+<td>POINT (-60.8593 -9.17193)</td>
+<td>1704370703</td>
+<td>7b173259-1ebc-353f-add8-c1eb28eaa39f</td>
+<td>-60.85930</td>
+<td>-9.17193</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>COLNIZA</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>69.0</td>
+<td>0.89</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5103254</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>117.5</td>
+<td>[-60.8593, -9.17193, -60.8593, -9.17193]</td>
+</tr>
+<tr>
+<th>7</th>
+<td>POINT (-60.88734 -9.16774)</td>
+<td>1704370704</td>
+<td>04729152-a3b7-3d67-b1b5-41e56921095d</td>
+<td>-60.88734</td>
+<td>-9.16774</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>COLNIZA</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>69.0</td>
+<td>0.88</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5103254</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>100.3</td>
+<td>[-60.88734, -9.16774, -60.88734, -9.16774]</td>
+</tr>
+<tr>
+<th>8</th>
+<td>POINT (-60.86489 -9.1648)</td>
+<td>1704370705</td>
+<td>a6ed5d41-f8ae-362f-9dba-6a1148cd7ff0</td>
+<td>-60.86489</td>
+<td>-9.16480</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>COLNIZA</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>69.0</td>
+<td>0.89</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5103254</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>165.2</td>
+<td>[-60.86489, -9.1648, -60.86489, -9.1648]</td>
+</tr>
+<tr>
+<th>9</th>
+<td>POINT (-59.66931 -9.16437)</td>
+<td>1704370706</td>
+<td>2906c265-7ade-3462-bb2a-f4af0e239249</td>
+<td>-59.66931</td>
+<td>-9.16437</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>COLNIZA</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>58.0</td>
+<td>0.84</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5103254</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>236.5</td>
+<td>[-59.66931, -9.16437, -59.66931, -9.16437]</td>
+</tr>
+<tr>
+<th>10</th>
+<td>POINT (-59.65132 -9.16201)</td>
+<td>1704370708</td>
+<td>b50c8bf3-c134-343e-8c43-75badf4a3c38</td>
+<td>-59.65132</td>
+<td>-9.16201</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>COLNIZA</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>58.0</td>
+<td>0.85</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5103254</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>156.9</td>
+<td>[-59.65132, -9.16201, -59.65132, -9.16201]</td>
+</tr>
+<tr>
+<th>11</th>
+<td>POINT (-59.72523 -9.15913)</td>
+<td>1704370709</td>
+<td>8f930f61-d252-30d9-bc71-0a8d29ae8cc6</td>
+<td>-59.72523</td>
+<td>-9.15913</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>COLNIZA</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>58.0</td>
+<td>0.82</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5103254</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>86.4</td>
+<td>[-59.72523, -9.15913, -59.72523, -9.15913]</td>
+</tr>
+<tr>
+<th>12</th>
+<td>POINT (-59.70708 -9.15678)</td>
+<td>1704370710</td>
+<td>d242a8be-6ba6-32e0-94ee-c8db634b8877</td>
+<td>-59.70708</td>
+<td>-9.15678</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>COLNIZA</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>58.0</td>
+<td>0.83</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5103254</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>164.1</td>
+<td>[-59.70708, -9.15678, -59.70708, -9.15678]</td>
+</tr>
+<tr>
+<th>13</th>
+<td>POINT (-59.67101 -9.15208)</td>
+<td>1704370711</td>
+<td>2956bfa1-9a17-39ca-8f57-47fe4829e34b</td>
+<td>-59.67101</td>
+<td>-9.15208</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>COLNIZA</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>58.0</td>
+<td>0.89</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5103254</td>
+<td>8</td>
+<td>Floresta de contato; Campinarana</td>
+<td>200.4</td>
+<td>[-59.67101, -9.15208, -59.67101, -9.15208]</td>
+</tr>
+<tr>
+<th>14</th>
+<td>POINT (-59.44225 -9.21305)</td>
+<td>1704372151</td>
+<td>9093bb46-af20-3d50-921a-69082ce4aa6b</td>
+<td>-59.44225</td>
+<td>-9.21305</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>COLNIZA</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>58.0</td>
+<td>0.99</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5103254</td>
+<td>8</td>
+<td>Agricultura e diversos</td>
+<td>25.0</td>
+<td>[-59.44225, -9.21305, -59.44225, -9.21305]</td>
+</tr>
+<tr>
+<th>15</th>
+<td>POINT (-59.46112 -9.2032)</td>
+<td>1704372153</td>
+<td>d9d13c60-ab22-3010-a5c2-00d78b689aef</td>
+<td>-59.46112</td>
+<td>-9.20320</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>COLNIZA</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>58.0</td>
+<td>0.93</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5103254</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>93.5</td>
+<td>[-59.46112, -9.2032, -59.46112, -9.2032]</td>
+</tr>
+<tr>
+<th>16</th>
+<td>POINT (-59.44373 -9.20095)</td>
+<td>1704372154</td>
+<td>2a6b21d9-56a9-3f04-9797-f749e68d4278</td>
+<td>-59.44373</td>
+<td>-9.20095</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>COLNIZA</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>58.0</td>
+<td>0.95</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5103254</td>
+<td>8</td>
+<td>Floresta de contato; Campinarana</td>
+<td>471.5</td>
+<td>[-59.44373, -9.20095, -59.44373, -9.20095]</td>
+</tr>
+<tr>
+<th>17</th>
+<td>POINT (-59.44529 -9.18886)</td>
+<td>1704372155</td>
+<td>1c61014d-3d55-3d9e-b515-9a33d67ba64b</td>
+<td>-59.44529</td>
+<td>-9.18886</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>COLNIZA</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>58.0</td>
+<td>0.96</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5103254</td>
+<td>8</td>
+<td>Savana arbórea; Caatinga fechada</td>
+<td>150.7</td>
+<td>[-59.44529, -9.18886, -59.44529, -9.18886]</td>
+</tr>
+<tr>
+<th>18</th>
+<td>POINT (-59.43359 -9.18248)</td>
+<td>1704372156</td>
+<td>b9e41b35-39b2-3fe0-99ef-fe19d013cf91</td>
+<td>-59.43359</td>
+<td>-9.18248</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>COLNIZA</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>58.0</td>
+<td>0.99</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5103254</td>
+<td>8</td>
+<td>Pastagens e gramíneas</td>
+<td>28.7</td>
+<td>[-59.43359, -9.18248, -59.43359, -9.18248]</td>
+</tr>
+<tr>
+<th>19</th>
+<td>POINT (-59.69489 -9.20843)</td>
+<td>1704721522</td>
+<td>c5b1ba2b-0096-351a-a525-540c5b30f9d5</td>
+<td>-59.69489</td>
+<td>-9.20843</td>
+<td>2024-08-02T18:34:00Z</td>
+<td>2024-08-02Z</td>
+<td>AQUA_M-T</td>
+<td>COLNIZA</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5103254</td>
+<td>8</td>
+<td></td>
+<td>185.5</td>
+<td>[-59.69489, -9.20843, -59.69489, -9.20843]</td>
+</tr>
+<tr>
+<th>20</th>
+<td>POINT (-60.91638 -9.18192)</td>
+<td>1704721523</td>
+<td>2aa1880a-4335-3eec-8cdf-528ac73db956</td>
+<td>-60.91638</td>
+<td>-9.18192</td>
+<td>2024-08-02T18:34:00Z</td>
+<td>2024-08-02Z</td>
+<td>AQUA_M-T</td>
+<td>COLNIZA</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5103254</td>
+<td>8</td>
+<td></td>
+<td>15.0</td>
+<td>[-60.91638, -9.18192, -60.91638, -9.18192]</td>
+</tr>
+<tr>
+<th>21</th>
+<td>POINT (-60.94033 -9.17553)</td>
+<td>1704721524</td>
+<td>bf6328d2-6314-3e65-b634-fb2a071d170b</td>
+<td>-60.94033</td>
+<td>-9.17553</td>
+<td>2024-08-02T18:34:00Z</td>
+<td>2024-08-02Z</td>
+<td>AQUA_M-T</td>
+<td>COLNIZA</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5103254</td>
+<td>8</td>
+<td></td>
+<td>27.5</td>
+<td>[-60.94033, -9.17553, -60.94033, -9.17553]</td>
+</tr>
+<tr>
+<th>22</th>
+<td>POINT (-60.95308 -9.16743)</td>
+<td>1704721525</td>
+<td>1e02a1ac-8128-3c1e-bd9b-4aa55a14c033</td>
+<td>-60.95308</td>
+<td>-9.16743</td>
+<td>2024-08-02T18:34:00Z</td>
+<td>2024-08-02Z</td>
+<td>AQUA_M-T</td>
+<td>COLNIZA</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5103254</td>
+<td>8</td>
+<td></td>
+<td>29.3</td>
+<td>[-60.95308, -9.16743, -60.95308, -9.16743]</td>
+</tr>
+<tr>
+<th>23</th>
+<td>POINT (-60.94187 -9.16568)</td>
+<td>1704721526</td>
+<td>b135d6d2-bb4c-3f03-8b43-1263186b511c</td>
+<td>-60.94187</td>
+<td>-9.16568</td>
+<td>2024-08-02T18:34:00Z</td>
+<td>2024-08-02Z</td>
+<td>AQUA_M-T</td>
+<td>COLNIZA</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5103254</td>
+<td>8</td>
+<td></td>
+<td>33.7</td>
+<td>[-60.94187, -9.16568, -60.94187, -9.16568]</td>
+</tr>
+<tr>
+<th>24</th>
+<td>POINT (-59.66142 -9.15903)</td>
+<td>1704721527</td>
+<td>94565aa5-380b-3139-9b35-3d529c8e4210</td>
+<td>-59.66142</td>
+<td>-9.15903</td>
+<td>2024-08-02T18:34:00Z</td>
+<td>2024-08-02Z</td>
+<td>AQUA_M-T</td>
+<td>COLNIZA</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5103254</td>
+<td>8</td>
+<td></td>
+<td>288.7</td>
+<td>[-59.66142, -9.15903, -59.66142, -9.15903]</td>
+</tr>
+<tr>
+<th>25</th>
+<td>POINT (-59.7173 -9.15693)</td>
+<td>1704721528</td>
+<td>958aade7-9899-3a0a-a6c4-038be2bea5a1</td>
+<td>-59.71730</td>
+<td>-9.15693</td>
+<td>2024-08-02T18:34:00Z</td>
+<td>2024-08-02Z</td>
+<td>AQUA_M-T</td>
+<td>COLNIZA</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5103254</td>
+<td>8</td>
+<td></td>
+<td>48.1</td>
+<td>[-59.7173, -9.15693, -59.7173, -9.15693]</td>
+</tr>
+<tr>
+<th>26</th>
+<td>POINT (-59.64788 -9.15687)</td>
+<td>1704721529</td>
+<td>84981c2a-1837-3193-a3cf-c4bef1368eab</td>
+<td>-59.64788</td>
+<td>-9.15687</td>
+<td>2024-08-02T18:34:00Z</td>
+<td>2024-08-02Z</td>
+<td>AQUA_M-T</td>
+<td>COLNIZA</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5103254</td>
+<td>8</td>
+<td></td>
+<td>228.3</td>
+<td>[-59.64788, -9.15687, -59.64788, -9.15687]</td>
+</tr>
+<tr>
+<th>27</th>
+<td>POINT (-59.66317 -9.14826)</td>
+<td>1704721530</td>
+<td>a27b15a6-6c8b-3623-94bc-835c3a6d797c</td>
+<td>-59.66317</td>
+<td>-9.14826</td>
+<td>2024-08-02T18:34:00Z</td>
+<td>2024-08-02Z</td>
+<td>AQUA_M-T</td>
+<td>COLNIZA</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5103254</td>
+<td>8</td>
+<td></td>
+<td>54.3</td>
+<td>[-59.66317, -9.14826, -59.66317, -9.14826]</td>
+</tr>
+<tr>
+<th>28</th>
+<td>POINT (-59.71899 -9.14619)</td>
+<td>1704721531</td>
+<td>b27614a5-5a1c-31b1-916d-a37b628ef805</td>
+<td>-59.71899</td>
+<td>-9.14619</td>
+<td>2024-08-02T18:34:00Z</td>
+<td>2024-08-02Z</td>
+<td>AQUA_M-T</td>
+<td>COLNIZA</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5103254</td>
+<td>8</td>
+<td></td>
+<td>40.3</td>
+<td>[-59.71899, -9.14619, -59.71899, -9.14619]</td>
+</tr>
+<tr>
+<th>29</th>
+<td>POINT (-60.91153 -9.14074)</td>
+<td>1704721532</td>
+<td>d4b2393e-ef94-3418-ac5f-961b11f145c9</td>
+<td>-60.91153</td>
+<td>-9.14074</td>
+<td>2024-08-02T18:34:00Z</td>
+<td>2024-08-02Z</td>
+<td>AQUA_M-T</td>
+<td>COLNIZA</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5103254</td>
+<td>8</td>
+<td></td>
+<td>12.1</td>
+<td>[-60.91153, -9.14074, -60.91153, -9.14074]</td>
+</tr>
+<tr>
+<th>30</th>
+<td>POINT (-60.65844 -9.0711)</td>
+<td>1704721533</td>
+<td>b45ca009-418a-3dea-aa4a-84818567929c</td>
+<td>-60.65844</td>
+<td>-9.07110</td>
+<td>2024-08-02T18:34:00Z</td>
+<td>2024-08-02Z</td>
+<td>AQUA_M-T</td>
+<td>COLNIZA</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5103254</td>
+<td>8</td>
+<td></td>
+<td>13.4</td>
+<td>[-60.65844, -9.0711, -60.65844, -9.0711]</td>
+</tr>
+<tr>
+<th>31</th>
+<td>POINT (-60.99681 -9.5934)</td>
+<td>1704721534</td>
+<td>60071408-056c-35ba-af57-d79c50838724</td>
+<td>-60.99681</td>
+<td>-9.59340</td>
+<td>2024-08-02T18:34:00Z</td>
+<td>2024-08-02Z</td>
+<td>AQUA_M-T</td>
+<td>COLNIZA</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5103254</td>
+<td>8</td>
+<td></td>
+<td>43.8</td>
+<td>[-60.99681, -9.5934, -60.99681, -9.5934]</td>
+</tr>
+<tr>
+<th>32</th>
+<td>POINT (-60.98587 -9.59173)</td>
+<td>1704721535</td>
+<td>c8c3a256-11ac-37bb-9e28-69db6dbfa4f0</td>
+<td>-60.98587</td>
+<td>-9.59173</td>
+<td>2024-08-02T18:34:00Z</td>
+<td>2024-08-02Z</td>
+<td>AQUA_M-T</td>
+<td>COLNIZA</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5103254</td>
+<td>8</td>
+<td></td>
+<td>108.1</td>
+<td>[-60.98587, -9.59173, -60.98587, -9.59173]</td>
+</tr>
+<tr>
+<th>33</th>
+<td>POINT (-61.45227 -9.09926)</td>
+<td>1704721584</td>
+<td>3a274f04-98b7-3f1d-9cf5-d71de5e9b049</td>
+<td>-61.45227</td>
+<td>-9.09926</td>
+<td>2024-08-02T18:34:00Z</td>
+<td>2024-08-02Z</td>
+<td>AQUA_M-T</td>
+<td>COLNIZA</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5103254</td>
+<td>8</td>
+<td></td>
+<td>16.2</td>
+<td>[-61.45227, -9.09926, -61.45227, -9.09926]</td>
+</tr>
+<tr>
+<th>34</th>
+<td>POINT (-61.41315 -9.07371)</td>
+<td>1704721585</td>
+<td>1d190dca-ae90-3e85-b9bc-8dbfab3b30ea</td>
+<td>-61.41315</td>
+<td>-9.07371</td>
+<td>2024-08-02T18:34:00Z</td>
+<td>2024-08-02Z</td>
+<td>AQUA_M-T</td>
+<td>COLNIZA</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5103254</td>
+<td>8</td>
+<td></td>
+<td>121.5</td>
+<td>[-61.41315, -9.07371, -61.41315, -9.07371]</td>
+</tr>
+<tr>
+<th>35</th>
+<td>POINT (-61.40258 -9.07209)</td>
+<td>1704721586</td>
+<td>bcf7d882-aa4c-3e95-a712-e849a9ab94dd</td>
+<td>-61.40258</td>
+<td>-9.07209</td>
+<td>2024-08-02T18:34:00Z</td>
+<td>2024-08-02Z</td>
+<td>AQUA_M-T</td>
+<td>COLNIZA</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5103254</td>
+<td>8</td>
+<td></td>
+<td>239.7</td>
+<td>[-61.40258, -9.07209, -61.40258, -9.07209]</td>
+</tr>
+<tr>
+<th>36</th>
+<td>POINT (-61.4041 -9.06251)</td>
+<td>1704721587</td>
+<td>5e146cfa-59f2-33d7-b68b-a0c53bf42221</td>
+<td>-61.40410</td>
+<td>-9.06251</td>
+<td>2024-08-02T18:34:00Z</td>
+<td>2024-08-02Z</td>
+<td>AQUA_M-T</td>
+<td>COLNIZA</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5103254</td>
+<td>8</td>
+<td></td>
+<td>9.6</td>
+<td>[-61.4041, -9.06251, -61.4041, -9.06251]</td>
+</tr>
+<tr>
+<th>37</th>
+<td>POINT (-59.56978 -9.24862)</td>
+<td>1704724323</td>
+<td>a476bad2-30e2-398f-8f54-cf337ac370d2</td>
+<td>-59.56978</td>
+<td>-9.24862</td>
+<td>2024-08-02T18:34:00Z</td>
+<td>2024-08-02Z</td>
+<td>AQUA_M-T</td>
+<td>COLNIZA</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5103254</td>
+<td>8</td>
+<td></td>
+<td>65.0</td>
+<td>[-59.56978, -9.24862, -59.56978, -9.24862]</td>
+</tr>
+<tr>
+<th>38</th>
+<td>POINT (-59.57342 -9.22698)</td>
+<td>1704724325</td>
+<td>7d834758-7b8a-304f-b4bc-1c400efd91f7</td>
+<td>-59.57342</td>
+<td>-9.22698</td>
+<td>2024-08-02T18:34:00Z</td>
+<td>2024-08-02Z</td>
+<td>AQUA_M-T</td>
+<td>COLNIZA</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5103254</td>
+<td>8</td>
+<td></td>
+<td>13.6</td>
+<td>[-59.57342, -9.22698, -59.57342, -9.22698]</td>
+</tr>
+<tr>
+<th>39</th>
+<td>POINT (-59.55965 -9.22477)</td>
+<td>1704724326</td>
+<td>5d532267-af0b-357c-977a-ef36b3a9a5e4</td>
+<td>-59.55965</td>
+<td>-9.22477</td>
+<td>2024-08-02T18:34:00Z</td>
+<td>2024-08-02Z</td>
+<td>AQUA_M-T</td>
+<td>COLNIZA</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5103254</td>
+<td>8</td>
+<td></td>
+<td>20.9</td>
+<td>[-59.55965, -9.22477, -59.55965, -9.22477]</td>
+</tr>
+<tr>
+<th>40</th>
+<td>POINT (-59.52168 -9.19634)</td>
+<td>1704724327</td>
+<td>e61899fa-69bc-3d81-9b87-9528199d2a0e</td>
+<td>-59.52168</td>
+<td>-9.19634</td>
+<td>2024-08-02T18:34:00Z</td>
+<td>2024-08-02Z</td>
+<td>AQUA_M-T</td>
+<td>COLNIZA</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5103254</td>
+<td>8</td>
+<td></td>
+<td>38.5</td>
+<td>[-59.52168, -9.19634, -59.52168, -9.19634]</td>
+</tr>
+<tr>
+<th>41</th>
+<td>POINT (-59.52905 -9.19371)</td>
+<td>1704724328</td>
+<td>4a13903a-dddd-30a7-bc69-5ae61829ce0b</td>
+<td>-59.52905</td>
+<td>-9.19371</td>
+<td>2024-08-02T18:34:00Z</td>
+<td>2024-08-02Z</td>
+<td>AQUA_M-T</td>
+<td>COLNIZA</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5103254</td>
+<td>8</td>
+<td></td>
+<td>77.1</td>
+<td>[-59.52905, -9.19371, -59.52905, -9.19371]</td>
+</tr>
+<tr>
+<th>42</th>
+<td>POINT (-59.51519 -9.19156)</td>
+<td>1704724329</td>
+<td>e4d4e6d5-ca05-361b-b76b-745cd35fcad9</td>
+<td>-59.51519</td>
+<td>-9.19156</td>
+<td>2024-08-02T18:34:00Z</td>
+<td>2024-08-02Z</td>
+<td>AQUA_M-T</td>
+<td>COLNIZA</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5103254</td>
+<td>8</td>
+<td></td>
+<td>44.5</td>
+<td>[-59.51519, -9.19156, -59.51519, -9.19156]</td>
+</tr>
+<tr>
+<th>43</th>
+<td>POINT (-59.52046 -9.15889)</td>
+<td>1704724330</td>
+<td>dd9c4036-e792-3c59-8e88-88c2d0dd5055</td>
+<td>-59.52046</td>
+<td>-9.15889</td>
+<td>2024-08-02T18:34:00Z</td>
+<td>2024-08-02Z</td>
+<td>AQUA_M-T</td>
+<td>COLNIZA</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5103254</td>
+<td>8</td>
+<td></td>
+<td>19.1</td>
+<td>[-59.52046, -9.15889, -59.52046, -9.15889]</td>
+</tr>
+</tbody>
+</table>
+<p>44 rows × 22 columns</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy for="cell-10">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Get a geodataframe with fires using the IBGE geocode for the city of Novo Mundo, Mato Grosso</span>
+<span class="n">getFires</span><span class="p">(</span><span class="n">spatial_filter</span> <span class="o">=</span> <span class="mi">5106265</span><span class="p">)</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-10"># Get a geodataframe with fires using the IBGE geocode for the city of Novo Mundo, Mato Grosso
+getFires(spatial_filter = 5106265)</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>geometry</th>
+<th>id_foco_bdq</th>
+<th>foco_id</th>
+<th>longitude</th>
+<th>latitude</th>
+<th>data_hora_gmt</th>
+<th>data_pas</th>
+<th>satelite</th>
+<th>municipio</th>
+<th>estado</th>
+<th>...</th>
+<th>numero_dias_sem_chuva</th>
+<th>risco_fogo</th>
+<th>bioma</th>
+<th>id_0</th>
+<th>id_1</th>
+<th>id_2</th>
+<th>continente_id</th>
+<th>vegetacao</th>
+<th>frp</th>
+<th>bbox</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>POINT (-55.19149 -9.60253)</td>
+<td>1704371823</td>
+<td>3fc747f2-20d9-302f-88d6-2000ab6ee082</td>
+<td>-55.19149</td>
+<td>-9.60253</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>NOVO MUNDO</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>31</td>
+<td>1</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5106265</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>63.6</td>
+<td>[-55.19149, -9.60253, -55.19149, -9.60253]</td>
+</tr>
+<tr>
+<th>1</th>
+<td>POINT (-55.18206 -9.6012)</td>
+<td>1704371824</td>
+<td>f9ffe70f-e0c3-39e1-abb4-7b38f4d1a57d</td>
+<td>-55.18206</td>
+<td>-9.60120</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>NOVO MUNDO</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>29</td>
+<td>1</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5106265</td>
+<td>8</td>
+<td>Savana; Caatinga aberta</td>
+<td>72.8</td>
+<td>[-55.18206, -9.6012, -55.18206, -9.6012]</td>
+</tr>
+<tr>
+<th>2</th>
+<td>POINT (-55.17259 -9.59985)</td>
+<td>1704371825</td>
+<td>13bf3226-3b73-3b01-bb08-04431306dd9c</td>
+<td>-55.17259</td>
+<td>-9.59985</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>NOVO MUNDO</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>27</td>
+<td>1</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5106265</td>
+<td>8</td>
+<td>Agricultura e diversos</td>
+<td>36.8</td>
+<td>[-55.17259, -9.59985, -55.17259, -9.59985]</td>
+</tr>
+<tr>
+<th>3</th>
+<td>POINT (-55.16313 -9.59851)</td>
+<td>1704371826</td>
+<td>2d96c483-1aa8-31cb-9fa0-04dcf5f6ff86</td>
+<td>-55.16313</td>
+<td>-9.59851</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>NOVO MUNDO</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>24</td>
+<td>1</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5106265</td>
+<td>8</td>
+<td>Floresta de contato; Campinarana</td>
+<td>12.4</td>
+<td>[-55.16313, -9.59851, -55.16313, -9.59851]</td>
+</tr>
+<tr>
+<th>4</th>
+<td>POINT (-55.15363 -9.59716)</td>
+<td>1704371827</td>
+<td>06947128-f67a-3ce1-870d-3860dbfb7f63</td>
+<td>-55.15363</td>
+<td>-9.59716</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>NOVO MUNDO</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>22</td>
+<td>1</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5106265</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>10.4</td>
+<td>[-55.15363, -9.59716, -55.15363, -9.59716]</td>
+</tr>
+<tr>
+<th>5</th>
+<td>POINT (-55.14407 -9.5958)</td>
+<td>1704371828</td>
+<td>303214f7-7377-3a8f-860b-e9df22cb4210</td>
+<td>-55.14407</td>
+<td>-9.59580</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>NOVO MUNDO</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>22</td>
+<td>1</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5106265</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>17.6</td>
+<td>[-55.14407, -9.5958, -55.14407, -9.5958]</td>
+</tr>
+<tr>
+<th>6</th>
+<td>POINT (-55.19275 -9.5934)</td>
+<td>1704371829</td>
+<td>1ca8dd8a-50a7-3b33-bd28-aee3f41b39f6</td>
+<td>-55.19275</td>
+<td>-9.59340</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>NOVO MUNDO</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>34</td>
+<td>1</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5106265</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>429.7</td>
+<td>[-55.19275, -9.5934, -55.19275, -9.5934]</td>
+</tr>
+<tr>
+<th>7</th>
+<td>POINT (-55.18335 -9.59207)</td>
+<td>1704371830</td>
+<td>7bb54352-2c75-3386-991f-24c890c2c4e8</td>
+<td>-55.18335</td>
+<td>-9.59207</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>NOVO MUNDO</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>31</td>
+<td>1</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5106265</td>
+<td>8</td>
+<td>Savana; Caatinga aberta</td>
+<td>860.0</td>
+<td>[-55.18335, -9.59207, -55.18335, -9.59207]</td>
+</tr>
+<tr>
+<th>8</th>
+<td>POINT (-55.17392 -9.59074)</td>
+<td>1704371831</td>
+<td>b1ff21a9-2b05-340d-ad34-d5dfe1c2cde3</td>
+<td>-55.17392</td>
+<td>-9.59074</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>NOVO MUNDO</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>28</td>
+<td>1</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5106265</td>
+<td>8</td>
+<td>Savana; Caatinga aberta</td>
+<td>720.6</td>
+<td>[-55.17392, -9.59074, -55.17392, -9.59074]</td>
+</tr>
+<tr>
+<th>9</th>
+<td>POINT (-55.16445 -9.5894)</td>
+<td>1704371832</td>
+<td>d4b5bc76-a2a2-3872-bc39-50ffba7f1f3f</td>
+<td>-55.16445</td>
+<td>-9.58940</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>NOVO MUNDO</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>25</td>
+<td>1</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5106265</td>
+<td>8</td>
+<td>Floresta de contato; Campinarana</td>
+<td>99.6</td>
+<td>[-55.16445, -9.5894, -55.16445, -9.5894]</td>
+</tr>
+<tr>
+<th>10</th>
+<td>POINT (-55.15492 -9.58805)</td>
+<td>1704371833</td>
+<td>d8c85207-cbe7-30d1-a523-82314e1e47b8</td>
+<td>-55.15492</td>
+<td>-9.58805</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>NOVO MUNDO</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>22</td>
+<td>1</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5106265</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>88.6</td>
+<td>[-55.15492, -9.58805, -55.15492, -9.58805]</td>
+</tr>
+<tr>
+<th>11</th>
+<td>POINT (-55.14529 -9.58668)</td>
+<td>1704371834</td>
+<td>c8b2116f-3dd2-3da3-bf97-13f6b2a5c196</td>
+<td>-55.14529</td>
+<td>-9.58668</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>NOVO MUNDO</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>22</td>
+<td>1</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5106265</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>32.3</td>
+<td>[-55.14529, -9.58668, -55.14529, -9.58668]</td>
+</tr>
+<tr>
+<th>12</th>
+<td>POINT (-55.18466 -9.58294)</td>
+<td>1704371835</td>
+<td>6d150240-d53a-30b7-abb2-7559b3349cbf</td>
+<td>-55.18466</td>
+<td>-9.58294</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>NOVO MUNDO</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>33</td>
+<td>1</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5106265</td>
+<td>8</td>
+<td>Savana arbórea; Caatinga fechada</td>
+<td>22.3</td>
+<td>[-55.18466, -9.58294, -55.18466, -9.58294]</td>
+</tr>
+</tbody>
+</table>
+<p>13 rows × 22 columns</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy for="cell-11">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Get a geodataframe with fires within a bounding box [x_min, y_min, x_max, y_max]</span>
+<span class="n">getFires</span><span class="p">(</span><span class="n">spatial_filter</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">59.5</span><span class="p">,</span><span class="o">-</span><span class="mi">7</span><span class="p">,</span><span class="o">-</span><span class="mi">59</span><span class="p">,</span><span class="o">-</span><span class="mf">6.5</span><span class="p">])</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-11"># Get a geodataframe with fires within a bounding box [x_min, y_min, x_max, y_max]
+getFires(spatial_filter = [-59.5,-7,-59,-6.5])</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>geometry</th>
+<th>id_foco_bdq</th>
+<th>foco_id</th>
+<th>longitude</th>
+<th>latitude</th>
+<th>data_hora_gmt</th>
+<th>data_pas</th>
+<th>satelite</th>
+<th>municipio</th>
+<th>estado</th>
+<th>...</th>
+<th>numero_dias_sem_chuva</th>
+<th>risco_fogo</th>
+<th>bioma</th>
+<th>id_0</th>
+<th>id_1</th>
+<th>id_2</th>
+<th>continente_id</th>
+<th>vegetacao</th>
+<th>frp</th>
+<th>bbox</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>POINT (-59.40308 -6.7261)</td>
+<td>1704372199</td>
+<td>c9a97776-f735-34eb-9416-de7a8c7cce4e</td>
+<td>-59.40308</td>
+<td>-6.72610</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>APUÍ</td>
+<td>AMAZONAS</td>
+<td>...</td>
+<td>21.0</td>
+<td>0.80</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>13</td>
+<td>1300144</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>1106.9</td>
+<td>[-59.40308, -6.7261, -59.40308, -6.7261]</td>
+</tr>
+<tr>
+<th>1</th>
+<td>POINT (-59.42051 -6.71668)</td>
+<td>1704372200</td>
+<td>28613145-05e1-3f60-89d8-e41d745c76e6</td>
+<td>-59.42051</td>
+<td>-6.71668</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>APUÍ</td>
+<td>AMAZONAS</td>
+<td>...</td>
+<td>21.0</td>
+<td>0.79</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>13</td>
+<td>1300144</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>269.4</td>
+<td>[-59.42051, -6.71668, -59.42051, -6.71668]</td>
+</tr>
+<tr>
+<th>2</th>
+<td>POINT (-59.40479 -6.71457)</td>
+<td>1704372201</td>
+<td>1d149515-90d9-3286-be67-50332578c2f2</td>
+<td>-59.40479</td>
+<td>-6.71457</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>APUÍ</td>
+<td>AMAZONAS</td>
+<td>...</td>
+<td>21.0</td>
+<td>0.80</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>13</td>
+<td>1300144</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>232.8</td>
+<td>[-59.40479, -6.71457, -59.40479, -6.71457]</td>
+</tr>
+<tr>
+<th>3</th>
+<td>POINT (-59.1438 -6.69096)</td>
+<td>1704372202</td>
+<td>52831e92-146d-3c07-a197-381d3e5d25c1</td>
+<td>-59.14380</td>
+<td>-6.69096</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>APUÍ</td>
+<td>AMAZONAS</td>
+<td>...</td>
+<td>21.0</td>
+<td>0.80</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>13</td>
+<td>1300144</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>32.1</td>
+<td>[-59.1438, -6.69096, -59.1438, -6.69096]</td>
+</tr>
+<tr>
+<th>4</th>
+<td>POINT (-59.36974 -6.96062)</td>
+<td>1704370636</td>
+<td>a71ccc38-19a7-3b93-aed6-431540befd40</td>
+<td>-59.36974</td>
+<td>-6.96062</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>APUÍ</td>
+<td>AMAZONAS</td>
+<td>...</td>
+<td>59.0</td>
+<td>0.88</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>13</td>
+<td>1300144</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>12.8</td>
+<td>[-59.36974, -6.96062, -59.36974, -6.96062]</td>
+</tr>
+<tr>
+<th>5</th>
+<td>POINT (-59.2458 -6.94426)</td>
+<td>1704370638</td>
+<td>3c26c144-c21a-32ce-8d7a-976254bd5125</td>
+<td>-59.24580</td>
+<td>-6.94426</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>APUÍ</td>
+<td>AMAZONAS</td>
+<td>...</td>
+<td>21.0</td>
+<td>0.89</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>13</td>
+<td>1300144</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>28.0</td>
+<td>[-59.2458, -6.94426, -59.2458, -6.94426]</td>
+</tr>
+<tr>
+<th>6</th>
+<td>POINT (-59.25192 -6.93558)</td>
+<td>1704370640</td>
+<td>02a9fb20-69b2-3bd0-8951-c11bdd68a6d6</td>
+<td>-59.25192</td>
+<td>-6.93558</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>APUÍ</td>
+<td>AMAZONAS</td>
+<td>...</td>
+<td>21.0</td>
+<td>0.88</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>13</td>
+<td>1300144</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>42.7</td>
+<td>[-59.25192, -6.93558, -59.25192, -6.93558]</td>
+</tr>
+<tr>
+<th>7</th>
+<td>POINT (-59.23825 -6.92204)</td>
+<td>1704370641</td>
+<td>d7c542bb-a7a2-324e-a0ea-12f8b5d300e6</td>
+<td>-59.23825</td>
+<td>-6.92204</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>APUÍ</td>
+<td>AMAZONAS</td>
+<td>...</td>
+<td>20.0</td>
+<td>0.95</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>13</td>
+<td>1300144</td>
+<td>8</td>
+<td>Savana; Caatinga aberta</td>
+<td>41.8</td>
+<td>[-59.23825, -6.92204, -59.23825, -6.92204]</td>
+</tr>
+<tr>
+<th>8</th>
+<td>POINT (-59.22314 -6.91995)</td>
+<td>1704370642</td>
+<td>3e1466c0-19b3-36bd-8a98-0d4b5b207e48</td>
+<td>-59.22314</td>
+<td>-6.91995</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>APUÍ</td>
+<td>AMAZONAS</td>
+<td>...</td>
+<td>21.0</td>
+<td>0.88</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>13</td>
+<td>1300144</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>121.2</td>
+<td>[-59.22314, -6.91995, -59.22314, -6.91995]</td>
+</tr>
+<tr>
+<th>9</th>
+<td>POINT (-59.2081 -6.91787)</td>
+<td>1704370643</td>
+<td>84843102-8697-32e3-b045-f1e3dd176d8c</td>
+<td>-59.20810</td>
+<td>-6.91787</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>APUÍ</td>
+<td>AMAZONAS</td>
+<td>...</td>
+<td>21.0</td>
+<td>0.87</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>13</td>
+<td>1300144</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>484.0</td>
+<td>[-59.2081, -6.91787, -59.2081, -6.91787]</td>
+</tr>
+<tr>
+<th>10</th>
+<td>POINT (-59.23984 -6.91061)</td>
+<td>1704370644</td>
+<td>a0d03a57-dd4e-30b4-b470-807b0a9f4090</td>
+<td>-59.23984</td>
+<td>-6.91061</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>APUÍ</td>
+<td>AMAZONAS</td>
+<td>...</td>
+<td>21.0</td>
+<td>0.93</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>13</td>
+<td>1300144</td>
+<td>8</td>
+<td>Savana arbórea; Caatinga fechada</td>
+<td>78.1</td>
+<td>[-59.23984, -6.91061, -59.23984, -6.91061]</td>
+</tr>
+<tr>
+<th>11</th>
+<td>POINT (-59.22461 -6.90852)</td>
+<td>1704370645</td>
+<td>6c1a7084-4b2d-3ff6-a1d2-dcce9417e499</td>
+<td>-59.22461</td>
+<td>-6.90852</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>APUÍ</td>
+<td>AMAZONAS</td>
+<td>...</td>
+<td>21.0</td>
+<td>0.87</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>13</td>
+<td>1300144</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>95.7</td>
+<td>[-59.22461, -6.90852, -59.22461, -6.90852]</td>
+</tr>
+<tr>
+<th>12</th>
+<td>POINT (-59.20958 -6.90646)</td>
+<td>1704370646</td>
+<td>4cd6df02-8755-37a2-a56a-7b097a4d811d</td>
+<td>-59.20958</td>
+<td>-6.90646</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>APUÍ</td>
+<td>AMAZONAS</td>
+<td>...</td>
+<td>21.0</td>
+<td>0.87</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>13</td>
+<td>1300144</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>186.5</td>
+<td>[-59.20958, -6.90646, -59.20958, -6.90646]</td>
+</tr>
+<tr>
+<th>13</th>
+<td>POINT (-59.37803 -6.79317)</td>
+<td>1704370647</td>
+<td>0a83b999-9401-32c1-9bfc-f8a309a92b86</td>
+<td>-59.37803</td>
+<td>-6.79317</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>APUÍ</td>
+<td>AMAZONAS</td>
+<td>...</td>
+<td>25.0</td>
+<td>0.83</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>13</td>
+<td>1300144</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>506.6</td>
+<td>[-59.37803, -6.79317, -59.37803, -6.79317]</td>
+</tr>
+<tr>
+<th>14</th>
+<td>POINT (-59.36235 -6.79096)</td>
+<td>1704370648</td>
+<td>0828441b-b0fe-361a-9ca4-359e927fd1ac</td>
+<td>-59.36235</td>
+<td>-6.79096</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>APUÍ</td>
+<td>AMAZONAS</td>
+<td>...</td>
+<td>22.0</td>
+<td>0.83</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>13</td>
+<td>1300144</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>18.2</td>
+<td>[-59.36235, -6.79096, -59.36235, -6.79096]</td>
+</tr>
+<tr>
+<th>15</th>
+<td>POINT (-59.37339 -6.78972)</td>
+<td>1704370649</td>
+<td>d35ff04a-5492-333c-ba80-2b431e89fb25</td>
+<td>-59.37339</td>
+<td>-6.78972</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>APUÍ</td>
+<td>AMAZONAS</td>
+<td>...</td>
+<td>24.0</td>
+<td>0.83</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>13</td>
+<td>1300144</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>419.9</td>
+<td>[-59.37339, -6.78972, -59.37339, -6.78972]</td>
+</tr>
+<tr>
+<th>16</th>
+<td>POINT (-59.37958 -6.78164)</td>
+<td>1704370650</td>
+<td>546d6a10-745e-3691-a3c1-a24283175442</td>
+<td>-59.37958</td>
+<td>-6.78164</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>APUÍ</td>
+<td>AMAZONAS</td>
+<td>...</td>
+<td>24.0</td>
+<td>0.82</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>13</td>
+<td>1300144</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>497.5</td>
+<td>[-59.37958, -6.78164, -59.37958, -6.78164]</td>
+</tr>
+<tr>
+<th>17</th>
+<td>POINT (-59.39071 -6.78027)</td>
+<td>1704370651</td>
+<td>c28ca464-2a69-376c-9955-2a23304e3fa1</td>
+<td>-59.39071</td>
+<td>-6.78027</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>APUÍ</td>
+<td>AMAZONAS</td>
+<td>...</td>
+<td>25.0</td>
+<td>0.82</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>13</td>
+<td>1300144</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>207.3</td>
+<td>[-59.39071, -6.78027, -59.39071, -6.78027]</td>
+</tr>
+<tr>
+<th>18</th>
+<td>POINT (-59.042 -6.90637)</td>
+<td>1704372130</td>
+<td>067fba9e-75d5-3c7a-8af0-46097ac04cfe</td>
+<td>-59.04200</td>
+<td>-6.90637</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>APUÍ</td>
+<td>AMAZONAS</td>
+<td>...</td>
+<td>21.0</td>
+<td>0.85</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>13</td>
+<td>1300144</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>28.7</td>
+<td>[-59.042, -6.90637, -59.042, -6.90637]</td>
+</tr>
+<tr>
+<th>19</th>
+<td>POINT (-59.02728 -6.90432)</td>
+<td>1704372131</td>
+<td>7dd9f164-d562-3928-b483-61434ad89f3d</td>
+<td>-59.02728</td>
+<td>-6.90432</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>APUÍ</td>
+<td>AMAZONAS</td>
+<td>...</td>
+<td>21.0</td>
+<td>0.85</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>13</td>
+<td>1300144</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>90.8</td>
+<td>[-59.02728, -6.90432, -59.02728, -6.90432]</td>
+</tr>
+<tr>
+<th>20</th>
+<td>POINT (-59.04364 -6.89514)</td>
+<td>1704372132</td>
+<td>e030197e-9c3e-372b-b84d-62adf21a03ca</td>
+<td>-59.04364</td>
+<td>-6.89514</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>APUÍ</td>
+<td>AMAZONAS</td>
+<td>...</td>
+<td>21.0</td>
+<td>0.85</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>13</td>
+<td>1300144</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>46.1</td>
+<td>[-59.04364, -6.89514, -59.04364, -6.89514]</td>
+</tr>
+<tr>
+<th>21</th>
+<td>POINT (-59.0288 -6.89308)</td>
+<td>1704372133</td>
+<td>6c7cd635-dd24-3930-904b-9c6a5422792c</td>
+<td>-59.02880</td>
+<td>-6.89308</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>APUÍ</td>
+<td>AMAZONAS</td>
+<td>...</td>
+<td>21.0</td>
+<td>0.85</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>13</td>
+<td>1300144</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>97.2</td>
+<td>[-59.0288, -6.89308, -59.0288, -6.89308]</td>
+</tr>
+<tr>
+<th>22</th>
+<td>POINT (-59.39365 -6.79537)</td>
+<td>1704372189</td>
+<td>418fb3a4-1c40-3ecb-80a3-a56da130633b</td>
+<td>-59.39365</td>
+<td>-6.79537</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>APUÍ</td>
+<td>AMAZONAS</td>
+<td>...</td>
+<td>28.0</td>
+<td>0.82</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>13</td>
+<td>1300144</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>316.9</td>
+<td>[-59.39365, -6.79537, -59.39365, -6.79537]</td>
+</tr>
+<tr>
+<th>23</th>
+<td>POINT (-59.38911 -6.79181)</td>
+<td>1704372190</td>
+<td>15af0720-85d9-3582-ade8-8d3ab37315a0</td>
+<td>-59.38911</td>
+<td>-6.79181</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>APUÍ</td>
+<td>AMAZONAS</td>
+<td>...</td>
+<td>27.0</td>
+<td>0.82</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>13</td>
+<td>1300144</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>1258.9</td>
+<td>[-59.38911, -6.79181, -59.38911, -6.79181]</td>
+</tr>
+<tr>
+<th>24</th>
+<td>POINT (-59.39528 -6.78384)</td>
+<td>1704372192</td>
+<td>ab6f37ef-e6be-325f-b357-f459792eb31a</td>
+<td>-59.39528</td>
+<td>-6.78384</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>APUÍ</td>
+<td>AMAZONAS</td>
+<td>...</td>
+<td>26.0</td>
+<td>0.82</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>13</td>
+<td>1300144</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>318.5</td>
+<td>[-59.39528, -6.78384, -59.39528, -6.78384]</td>
+</tr>
+<tr>
+<th>25</th>
+<td>POINT (-59.37498 -6.77819)</td>
+<td>1704372193</td>
+<td>4ff0db6f-a52e-3f75-8346-e4edf27d04ef</td>
+<td>-59.37498</td>
+<td>-6.77819</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>APUÍ</td>
+<td>AMAZONAS</td>
+<td>...</td>
+<td>23.0</td>
+<td>0.82</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>13</td>
+<td>1300144</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>230.7</td>
+<td>[-59.37498, -6.77819, -59.37498, -6.77819]</td>
+</tr>
+<tr>
+<th>26</th>
+<td>POINT (-59.40149 -6.73764)</td>
+<td>1704372197</td>
+<td>94d9c4e9-8484-3190-90f2-9869acd8a2b0</td>
+<td>-59.40149</td>
+<td>-6.73764</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>APUÍ</td>
+<td>AMAZONAS</td>
+<td>...</td>
+<td>21.0</td>
+<td>0.81</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>13</td>
+<td>1300144</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>240.7</td>
+<td>[-59.40149, -6.73764, -59.40149, -6.73764]</td>
+</tr>
+<tr>
+<th>27</th>
+<td>POINT (-59.41892 -6.72824)</td>
+<td>1704372198</td>
+<td>3166908d-d35d-3ad7-8229-27cd0e134cf7</td>
+<td>-59.41892</td>
+<td>-6.72824</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>APUÍ</td>
+<td>AMAZONAS</td>
+<td>...</td>
+<td>21.0</td>
+<td>0.80</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>13</td>
+<td>1300144</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>787.7</td>
+<td>[-59.41892, -6.72824, -59.41892, -6.72824]</td>
+</tr>
+<tr>
+<th>28</th>
+<td>POINT (-59.14545 -6.67968)</td>
+<td>1704372203</td>
+<td>f9e277b9-2802-3d75-8df8-fdd786da9b19</td>
+<td>-59.14545</td>
+<td>-6.67968</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>APUÍ</td>
+<td>AMAZONAS</td>
+<td>...</td>
+<td>21.0</td>
+<td>0.79</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>13</td>
+<td>1300144</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>140.5</td>
+<td>[-59.14545, -6.67968, -59.14545, -6.67968]</td>
+</tr>
+<tr>
+<th>29</th>
+<td>POINT (-59.13063 -6.67768)</td>
+<td>1704372204</td>
+<td>822eb51b-b283-3c91-a5c3-dc1b4a61ad35</td>
+<td>-59.13063</td>
+<td>-6.67768</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>APUÍ</td>
+<td>AMAZONAS</td>
+<td>...</td>
+<td>21.0</td>
+<td>0.79</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>13</td>
+<td>1300144</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>79.8</td>
+<td>[-59.13063, -6.67768, -59.13063, -6.67768]</td>
+</tr>
+<tr>
+<th>30</th>
+<td>POINT (-59.15363 -6.66919)</td>
+<td>1704372205</td>
+<td>934d7200-cbb0-336e-9351-47f811908c83</td>
+<td>-59.15363</td>
+<td>-6.66919</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>APUÍ</td>
+<td>AMAZONAS</td>
+<td>...</td>
+<td>21.0</td>
+<td>0.79</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>13</td>
+<td>1300144</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>30.5</td>
+<td>[-59.15363, -6.66919, -59.15363, -6.66919]</td>
+</tr>
+<tr>
+<th>31</th>
+<td>POINT (-59.1471 -6.66839)</td>
+<td>1704372206</td>
+<td>34828e89-11d0-3162-9610-18520f1c0737</td>
+<td>-59.14710</td>
+<td>-6.66839</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>APUÍ</td>
+<td>AMAZONAS</td>
+<td>...</td>
+<td>21.0</td>
+<td>0.79</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>13</td>
+<td>1300144</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>62.0</td>
+<td>[-59.1471, -6.66839, -59.1471, -6.66839]</td>
+</tr>
+<tr>
+<th>32</th>
+<td>POINT (-59.13882 -6.66709)</td>
+<td>1704372207</td>
+<td>cd51e150-da83-3195-8634-ac40b7b42911</td>
+<td>-59.13882</td>
+<td>-6.66709</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>APUÍ</td>
+<td>AMAZONAS</td>
+<td>...</td>
+<td>21.0</td>
+<td>0.79</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>13</td>
+<td>1300144</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>56.6</td>
+<td>[-59.13882, -6.66709, -59.13882, -6.66709]</td>
+</tr>
+<tr>
+<th>33</th>
+<td>POINT (-59.13226 -6.6664)</td>
+<td>1704372208</td>
+<td>51658f89-0f30-30b3-8db0-d322936cdfdb</td>
+<td>-59.13226</td>
+<td>-6.66640</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>APUÍ</td>
+<td>AMAZONAS</td>
+<td>...</td>
+<td>21.0</td>
+<td>0.79</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>13</td>
+<td>1300144</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>24.6</td>
+<td>[-59.13226, -6.6664, -59.13226, -6.6664]</td>
+</tr>
+<tr>
+<th>34</th>
+<td>POINT (-59.4621 -6.99619)</td>
+<td>1704721511</td>
+<td>e624de06-0dc8-3379-b868-95bffef76e0d</td>
+<td>-59.46210</td>
+<td>-6.99619</td>
+<td>2024-08-02T18:34:00Z</td>
+<td>2024-08-02Z</td>
+<td>AQUA_M-T</td>
+<td>APUÍ</td>
+<td>AMAZONAS</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>13</td>
+<td>1300144</td>
+<td>8</td>
+<td></td>
+<td>29.5</td>
+<td>[-59.4621, -6.99619, -59.4621, -6.99619]</td>
+</tr>
+<tr>
+<th>35</th>
+<td>POINT (-59.40007 -6.87243)</td>
+<td>1704721516</td>
+<td>e8f48a9d-9a9f-333d-8a8c-e797d922f074</td>
+<td>-59.40007</td>
+<td>-6.87243</td>
+<td>2024-08-02T18:34:00Z</td>
+<td>2024-08-02Z</td>
+<td>AQUA_M-T</td>
+<td>APUÍ</td>
+<td>AMAZONAS</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>13</td>
+<td>1300144</td>
+<td>8</td>
+<td></td>
+<td>15.7</td>
+<td>[-59.40007, -6.87243, -59.40007, -6.87243]</td>
+</tr>
+<tr>
+<th>36</th>
+<td>POINT (-59.39492 -6.86891)</td>
+<td>1704721517</td>
+<td>11ec7de9-2e0d-30e2-8ab0-6dc6203e03f1</td>
+<td>-59.39492</td>
+<td>-6.86891</td>
+<td>2024-08-02T18:34:00Z</td>
+<td>2024-08-02Z</td>
+<td>AQUA_M-T</td>
+<td>APUÍ</td>
+<td>AMAZONAS</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>13</td>
+<td>1300144</td>
+<td>8</td>
+<td></td>
+<td>17.2</td>
+<td>[-59.39492, -6.86891, -59.39492, -6.86891]</td>
+</tr>
+</tbody>
+</table>
+<p>37 rows × 22 columns</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy for="cell-12">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Get a geodataframe with fires within a WKT geometry</span>
+<span class="n">getFires</span><span class="p">(</span><span class="n">spatial_filter</span> <span class="o">=</span> <span class="s1">'POLYGON ((-60 -10, -55 -9, -55 -10, -60 -10))'</span><span class="p">)</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-12"># Get a geodataframe with fires within a WKT geometry
+getFires(spatial_filter = 'POLYGON ((-60 -10, -55 -9, -55 -10, -60 -10))')</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>geometry</th>
+<th>id_foco_bdq</th>
+<th>foco_id</th>
+<th>longitude</th>
+<th>latitude</th>
+<th>data_hora_gmt</th>
+<th>data_pas</th>
+<th>satelite</th>
+<th>municipio</th>
+<th>estado</th>
+<th>...</th>
+<th>numero_dias_sem_chuva</th>
+<th>risco_fogo</th>
+<th>bioma</th>
+<th>id_0</th>
+<th>id_1</th>
+<th>id_2</th>
+<th>continente_id</th>
+<th>vegetacao</th>
+<th>frp</th>
+<th>bbox</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>POINT (-55.19149 -9.60253)</td>
+<td>1704371823</td>
+<td>3fc747f2-20d9-302f-88d6-2000ab6ee082</td>
+<td>-55.19149</td>
+<td>-9.60253</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>NOVO MUNDO</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>31.0</td>
+<td>1.0</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5106265</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>63.6</td>
+<td>[-55.19149, -9.60253, -55.19149, -9.60253]</td>
+</tr>
+<tr>
+<th>1</th>
+<td>POINT (-55.18206 -9.6012)</td>
+<td>1704371824</td>
+<td>f9ffe70f-e0c3-39e1-abb4-7b38f4d1a57d</td>
+<td>-55.18206</td>
+<td>-9.60120</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>NOVO MUNDO</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>29.0</td>
+<td>1.0</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5106265</td>
+<td>8</td>
+<td>Savana; Caatinga aberta</td>
+<td>72.8</td>
+<td>[-55.18206, -9.6012, -55.18206, -9.6012]</td>
+</tr>
+<tr>
+<th>2</th>
+<td>POINT (-55.17259 -9.59985)</td>
+<td>1704371825</td>
+<td>13bf3226-3b73-3b01-bb08-04431306dd9c</td>
+<td>-55.17259</td>
+<td>-9.59985</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>NOVO MUNDO</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>27.0</td>
+<td>1.0</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5106265</td>
+<td>8</td>
+<td>Agricultura e diversos</td>
+<td>36.8</td>
+<td>[-55.17259, -9.59985, -55.17259, -9.59985]</td>
+</tr>
+<tr>
+<th>3</th>
+<td>POINT (-55.16313 -9.59851)</td>
+<td>1704371826</td>
+<td>2d96c483-1aa8-31cb-9fa0-04dcf5f6ff86</td>
+<td>-55.16313</td>
+<td>-9.59851</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>NOVO MUNDO</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>24.0</td>
+<td>1.0</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5106265</td>
+<td>8</td>
+<td>Floresta de contato; Campinarana</td>
+<td>12.4</td>
+<td>[-55.16313, -9.59851, -55.16313, -9.59851]</td>
+</tr>
+<tr>
+<th>4</th>
+<td>POINT (-55.15363 -9.59716)</td>
+<td>1704371827</td>
+<td>06947128-f67a-3ce1-870d-3860dbfb7f63</td>
+<td>-55.15363</td>
+<td>-9.59716</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>NOVO MUNDO</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>22.0</td>
+<td>1.0</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5106265</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>10.4</td>
+<td>[-55.15363, -9.59716, -55.15363, -9.59716]</td>
+</tr>
+<tr>
+<th>5</th>
+<td>POINT (-55.14407 -9.5958)</td>
+<td>1704371828</td>
+<td>303214f7-7377-3a8f-860b-e9df22cb4210</td>
+<td>-55.14407</td>
+<td>-9.59580</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>NOVO MUNDO</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>22.0</td>
+<td>1.0</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5106265</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>17.6</td>
+<td>[-55.14407, -9.5958, -55.14407, -9.5958]</td>
+</tr>
+<tr>
+<th>6</th>
+<td>POINT (-55.19275 -9.5934)</td>
+<td>1704371829</td>
+<td>1ca8dd8a-50a7-3b33-bd28-aee3f41b39f6</td>
+<td>-55.19275</td>
+<td>-9.59340</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>NOVO MUNDO</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>34.0</td>
+<td>1.0</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5106265</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>429.7</td>
+<td>[-55.19275, -9.5934, -55.19275, -9.5934]</td>
+</tr>
+<tr>
+<th>7</th>
+<td>POINT (-55.18335 -9.59207)</td>
+<td>1704371830</td>
+<td>7bb54352-2c75-3386-991f-24c890c2c4e8</td>
+<td>-55.18335</td>
+<td>-9.59207</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>NOVO MUNDO</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>31.0</td>
+<td>1.0</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5106265</td>
+<td>8</td>
+<td>Savana; Caatinga aberta</td>
+<td>860.0</td>
+<td>[-55.18335, -9.59207, -55.18335, -9.59207]</td>
+</tr>
+<tr>
+<th>8</th>
+<td>POINT (-55.17392 -9.59074)</td>
+<td>1704371831</td>
+<td>b1ff21a9-2b05-340d-ad34-d5dfe1c2cde3</td>
+<td>-55.17392</td>
+<td>-9.59074</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>NOVO MUNDO</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>28.0</td>
+<td>1.0</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5106265</td>
+<td>8</td>
+<td>Savana; Caatinga aberta</td>
+<td>720.6</td>
+<td>[-55.17392, -9.59074, -55.17392, -9.59074]</td>
+</tr>
+<tr>
+<th>9</th>
+<td>POINT (-55.16445 -9.5894)</td>
+<td>1704371832</td>
+<td>d4b5bc76-a2a2-3872-bc39-50ffba7f1f3f</td>
+<td>-55.16445</td>
+<td>-9.58940</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>NOVO MUNDO</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>25.0</td>
+<td>1.0</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5106265</td>
+<td>8</td>
+<td>Floresta de contato; Campinarana</td>
+<td>99.6</td>
+<td>[-55.16445, -9.5894, -55.16445, -9.5894]</td>
+</tr>
+<tr>
+<th>10</th>
+<td>POINT (-55.15492 -9.58805)</td>
+<td>1704371833</td>
+<td>d8c85207-cbe7-30d1-a523-82314e1e47b8</td>
+<td>-55.15492</td>
+<td>-9.58805</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>NOVO MUNDO</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>22.0</td>
+<td>1.0</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5106265</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>88.6</td>
+<td>[-55.15492, -9.58805, -55.15492, -9.58805]</td>
+</tr>
+<tr>
+<th>11</th>
+<td>POINT (-55.14529 -9.58668)</td>
+<td>1704371834</td>
+<td>c8b2116f-3dd2-3da3-bf97-13f6b2a5c196</td>
+<td>-55.14529</td>
+<td>-9.58668</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>NOVO MUNDO</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>22.0</td>
+<td>1.0</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5106265</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>32.3</td>
+<td>[-55.14529, -9.58668, -55.14529, -9.58668]</td>
+</tr>
+<tr>
+<th>12</th>
+<td>POINT (-55.18466 -9.58294)</td>
+<td>1704371835</td>
+<td>6d150240-d53a-30b7-abb2-7559b3349cbf</td>
+<td>-55.18466</td>
+<td>-9.58294</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>NOVO MUNDO</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>33.0</td>
+<td>1.0</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5106265</td>
+<td>8</td>
+<td>Savana arbórea; Caatinga fechada</td>
+<td>22.3</td>
+<td>[-55.18466, -9.58294, -55.18466, -9.58294]</td>
+</tr>
+<tr>
+<th>13</th>
+<td>POINT (-57.84533 -9.83778)</td>
+<td>1704372038</td>
+<td>6b73a608-28b5-34c3-9fb3-b46df073df23</td>
+<td>-57.84533</td>
+<td>-9.83778</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>NOVA BANDEIRANTES</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>59.0</td>
+<td>1.0</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5106158</td>
+<td>8</td>
+<td>Pastagens e gramíneas</td>
+<td>26.3</td>
+<td>[-57.84533, -9.83778, -57.84533, -9.83778]</td>
+</tr>
+<tr>
+<th>14</th>
+<td>POINT (-56.8055 -9.53387)</td>
+<td>1704372039</td>
+<td>a85d4d1c-b3d2-34ca-be3f-0290fa5fd237</td>
+<td>-56.80550</td>
+<td>-9.53387</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>PARANAÍTA</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>59.0</td>
+<td>1.0</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5106299</td>
+<td>8</td>
+<td>Pastagens e gramíneas</td>
+<td>30.3</td>
+<td>[-56.8055, -9.53387, -56.8055, -9.53387]</td>
+</tr>
+<tr>
+<th>15</th>
+<td>POINT (-56.79422 -9.53231)</td>
+<td>1704372040</td>
+<td>186d86d8-f410-3993-be01-9e78107d7269</td>
+<td>-56.79422</td>
+<td>-9.53231</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>PARANAÍTA</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>59.0</td>
+<td>1.0</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5106299</td>
+<td>8</td>
+<td>Pastagens e gramíneas</td>
+<td>135.1</td>
+<td>[-56.79422, -9.53231, -56.79422, -9.53231]</td>
+</tr>
+<tr>
+<th>16</th>
+<td>POINT (-56.79568 -9.52239)</td>
+<td>1704372041</td>
+<td>d7fe92d9-3724-3ab2-8d06-ac35d8d246c3</td>
+<td>-56.79568</td>
+<td>-9.52239</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>PARANAÍTA</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>59.0</td>
+<td>1.0</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5106299</td>
+<td>8</td>
+<td>Pastagens e gramíneas</td>
+<td>43.9</td>
+<td>[-56.79568, -9.52239, -56.79568, -9.52239]</td>
+</tr>
+<tr>
+<th>17</th>
+<td>POINT (-57.09594 -9.4506)</td>
+<td>1704372042</td>
+<td>1a9c9482-d09e-38e9-9c6a-45e4cdc6f2a7</td>
+<td>-57.09594</td>
+<td>-9.45060</td>
+<td>2024-08-01T17:54:00Z</td>
+<td>2024-08-01Z</td>
+<td>AQUA_M-T</td>
+<td>APIACÁS</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>68.0</td>
+<td>1.0</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5100805</td>
+<td>8</td>
+<td>Floresta Ombrófila densa</td>
+<td>14.0</td>
+<td>[-57.09594, -9.4506, -57.09594, -9.4506]</td>
+</tr>
+<tr>
+<th>18</th>
+<td>POINT (-57.09465 -9.44869)</td>
+<td>1704724252</td>
+<td>48d33df5-15fc-3d21-8155-722e60c08b60</td>
+<td>-57.09465</td>
+<td>-9.44869</td>
+<td>2024-08-02T18:34:00Z</td>
+<td>2024-08-02Z</td>
+<td>AQUA_M-T</td>
+<td>PARANAÍTA</td>
+<td>MATO GROSSO</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>Amazônia</td>
+<td>33</td>
+<td>51</td>
+<td>5106299</td>
+<td>8</td>
+<td></td>
+<td>21.2</td>
+<td>[-57.09465, -9.44869, -57.09465, -9.44869]</td>
+</tr>
+</tbody>
+</table>
+<p>19 rows × 22 columns</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div> <!-- jp-Notebook -->
 </div> <!-- jupyter-wrapper -->
@@ -2344,7 +5446,7 @@ connectDeter('Amazonia')</div>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-08-01T18:29:19+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-08-01</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-08-02T23:31:23+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-08-02</span>
   </span>
 
     
