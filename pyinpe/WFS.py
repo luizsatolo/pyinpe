@@ -3,6 +3,9 @@ import geopandas as gpd
 import shapely as shp
 import pkg_resources
 import pandas as pd
+import warnings
+
+warnings.simplefilter(action='ignore', category=FutureWarning)
 
 class Deter:
 
@@ -148,33 +151,43 @@ def getFires(spatial_filter: int|str|list|None = None, temporal_filter: str = ['
     get_location = spatial_filter
     if isinstance(get_location, int):
       spatial_query = 'geocode'
-      location = 'id_2='+str(get_location)#+'%20AND%20'
+      location = 'id_2='+str(get_location)+'%20AND%20'
     elif isinstance(get_location, str):
       if ' - ' in get_location:
         spatial_query = 'city_name'
         uf = df_estado.estado[df_estado.sigla == get_location.split('-')[1].strip()].item()
-        location = 'municipio=%27'+get_location.split('-')[0].strip().upper()+'%27%20AND%20estado=%27'+uf+'%27'#%20AND%20'
+        location = 'municipio=%27'+get_location.split('-')[0].strip().upper()+'%27%20AND%20estado=%27'+uf+'%27%20AND%20'
       elif 'POLYGON' in get_location:
         spatial_query = 'polygon'
         s = gpd.GeoSeries.from_wkt([get_location])
-        location = 'BBOX(geometria,'+str(s[0].bounds).replace('(','').replace(')','').replace(' ','')+',%27EPSG:4326%27)'#%20AND%20'
+        location = 'BBOX(geometria,'+str(s[0].bounds).replace('(','').replace(')','').replace(' ','')+',%27EPSG:4326%27)%20AND%20'
       else:
         spatial_query = 'invalid'
         location = ''
     elif isinstance(get_location, list):
       spatial_query = 'bbox'
-      location = 'BBOX(geometria,'+str(get_location).replace('[','').replace(']','').replace(' ','')+',%27EPSG:4326%27)'#%20AND%20'
+      location = 'BBOX(geometria,'+str(get_location).replace('[','').replace(']','').replace(' ','')+',%27EPSG:4326%27)%20AND%20'
     else:
       spatial_query = 'none'
       location = ''
     start_date = temporal_filter[0]
     end_date = temporal_filter[1]
+    start_year = start_date[:4]
+    end_year = end_date[:4]
+
+    df = gpd.GeoDataFrame(columns=['geometry', 'id_foco_bdq', 'foco_id', 'longitude', 'latitude',
+       'data_hora_gmt', 'data_pas', 'satelite', 'municipio', 'estado', 'pais',
+       'precipitacao', 'numero_dias_sem_chuva', 'risco_fogo', 'bioma', 'id_0',
+       'id_1', 'id_2', 'continente_id', 'vegetacao', 'frp', 'bbox'], geometry='geometry')
+    
     try:
-      url = request_url+'dados_abertos:focos_48h_br_satref&CQL_FILTER='+location+'&outputFormat=json'
-      #url = request_url+'&CQL_FILTER='+location+'view_date%20BETWEEN%20%27'+start_date+'%27%20AND%20%27'+end_date+'%27&outputFormat=json&sortBy=gid&startIndex=0'
-      r = requests.get(url)
-      j = r.json()
-      df = gpd.GeoDataFrame.from_features(j)
+      for t in range(int(start_year), int(end_year)+1):
+        url = request_url+'dados_abertos:focos_'+str(t)+'_br_satref&CQL_FILTER='+location+'data_hora_gmt%20BETWEEN%20%27'+start_date+'%27%20AND%20%27'+end_date+'%27&outputFormat=json'
+        #url = request_url+'&CQL_FILTER='+location+'data_hora_gmt%20BETWEEN%20%27'+start_date+'%27%20AND%20%27'+end_date+'%27&outputFormat=json&sortBy=gid&startIndex=0'
+        r = requests.get(url)
+        j = r.json()
+        temp_df = gpd.GeoDataFrame.from_features(j)
+        df = pd.concat([df, temp_df]).reset_index(drop = True)
       if spatial_query == 'polygon':
         return df.loc[df.within(shp.from_wkt(get_location))].reset_index(drop=True)
       else:
