@@ -13,15 +13,15 @@ JSON_FILE = pkg_resources.resource_filename('pyinpe', '__assets__/config.json')
 with open(JSON_FILE) as config_file:
     config = json.load(config_file)
 
-
 class Deter:
 
     def __init__(self, database):
       self.database = database
       self.collection = None
+      self.layer = None
       if self.database == "Cerrado":
-        self.collection = config['DETER_CERRADO_COLLECTION']
-        self.layer = config['DETER_CERRADO_LAYER']
+        self.collection = json.loads(config['DETER_CERRADO_COLLECTION'])
+        self.layer = json.loads(config['DETER_CERRADO_LAYER'])
       elif self.database == "Amazonia":
         self.collection = config['DETER_AMAZONIA_COLLECTION']
         self.layer = config['DETER_AMAZONIA_LAYER']
