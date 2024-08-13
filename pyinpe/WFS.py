@@ -20,11 +20,11 @@ class Deter:
       self.collection = None
       self.layer = None
       if self.database == "Cerrado":
-        self.collection = json.loads(config['DETER_CERRADO_COLLECTION'])
-        self.layer = json.loads(config['DETER_CERRADO_LAYER'])
+        self.collection = "deter-cerrado/deter_cerrado"
+        self.layer = "deter-cerrado:deter_cerrado"
       elif self.database == "Amazonia":
-        self.collection = config['DETER_AMAZONIA_COLLECTION']
-        self.layer = config['DETER_AMAZONIA_LAYER']
+        self.collection = "deter-amz/deter_amz"
+        self.layer = "deter-amz:deter_amz"
 
     def __str__(self):
       global request_url 
