@@ -181,7 +181,7 @@ def getFires(spatial_filter: int|str|list|None = None, temporal_filter: str = ['
     start_year = start_date[:4]
     end_year = end_date[:4]
 
-    df = gpd.GeoDataFrame(columns=[config['QUEIMADAS_RESPONSE_COLUMNS']], geometry=config['QUEIMADAS_RESPONSE_GEOMETRY'])
+    df = gpd.GeoDataFrame(columns=config['QUEIMADAS_RESPONSE_COLUMNS'].strip('][').split(', '), geometry=config['QUEIMADAS_RESPONSE_GEOMETRY'])
     
     try:
       for t in range(int(start_year), int(end_year)+1):
