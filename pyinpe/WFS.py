@@ -31,7 +31,7 @@ class Deter:
         url = config['TERRABRASILIS_URL']+config['DETER_GEOSERVER']+self.collection+config['GETCAPABILITIES_REQUEST']
         r = requests.get(url)
         if r.status_code == 200:
-          request_url = config['TERRABRASILIS_GEOSERVER_URL']+self.collection+config['GETFEATURE_REQUEST']+self.layer
+          request_url = config['TERRABRASILIS_GEOSERVER_URL']+config['DETER_GEOSERVER']+self.collection+config['GETFEATURE_REQUEST']+self.layer
           return f"Connected to DETER {self.database} WFS."
         else:
           request_url = None
