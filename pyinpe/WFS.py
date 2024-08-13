@@ -8,7 +8,8 @@ import json
 
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
-with open("config.json") as config_file:
+JSON_FILE = pkg_resources.resource_filename('pyinpe', '__assets__/config.json')
+with open(JSON_FILE) as config_file:
     config = json.load(config_file)
 
 
