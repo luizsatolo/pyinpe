@@ -4,8 +4,13 @@ import shapely as shp
 import pkg_resources
 import pandas as pd
 import warnings
+import json
 
 warnings.simplefilter(action='ignore', category=FutureWarning)
+
+with open("config.json") as config_file:
+    config = json.load(config_file)
+
 
 class Deter:
 
@@ -13,8 +18,8 @@ class Deter:
       self.database = database
       self.collection = None
       if self.database == "Cerrado":
-        self.collection = 'deter-cerrado/deter_cerrado'
-        self.layer = 'deter-cerrado:deter_cerrado'
+        self.collection = config['DETER_CERRADO_COLLECTION']
+        self.layer = config['DETER_CERRADO_LAYER']
       elif self.database == "Amazonia":
         self.collection = 'deter-amz/deter_amz'
         self.layer = 'deter-amz:deter_amz'
