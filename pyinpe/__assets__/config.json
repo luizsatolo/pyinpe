@@ -4,8 +4,6 @@
     "GETFEATURE_REQUEST": "/wfs?service=WFS&version=2.0.0&srsName=EPSG:4326&request=GetFeature&typeName=",
     "GETFEATURE_OUTPUT": "json",
     "DETER_GEOSERVER": "geoserver/",
-    "DETER_CERRADO_COLLECTION": "deter-cerrado/deter_cerrado",
-    "DETER_CERRADO_LAYER": "deter-cerrado:deter_cerrado",
     "DETER_AMAZONIA_COLLECTION": "deter-amz/deter_amz",
     "DETER_AMAZONIA_LAYER": "deter-amz:deter_amz",
     "DETER_CITY_VAR": "municipality",
