@@ -1070,7 +1070,7 @@ connectDeter('Cerrado')</div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Please, enter a valid database (currently, only 'Amazonia' or 'Cerrado' are allowed).
+<pre>Connected to DETER Cerrado WFS.
 </pre>
 </div>
 </div>
@@ -1111,8 +1111,123 @@ getAlerts(spatial_filter='Posse - GO', temporal_filter=['2020-01-01', '2020-12-3
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>'Not connected to DETER database.'</pre>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>geometry</th>
+<th>gid</th>
+<th>classname</th>
+<th>quadrant</th>
+<th>path_row</th>
+<th>view_date</th>
+<th>created_date</th>
+<th>sensor</th>
+<th>satellite</th>
+<th>areatotalkm</th>
+<th>areauckm</th>
+<th>uc</th>
+<th>areamunkm</th>
+<th>municipality</th>
+<th>uf</th>
+<th>publish_month</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>MULTIPOLYGON (((-46.2145 -14.2588, -46.2115 -1...</td>
+<td>14298_curr</td>
+<td>DESMATAMENTO_CR</td>
+<td>None</td>
+<td>159_117</td>
+<td>2020-05-28</td>
+<td>2020-05-29</td>
+<td>AWFI</td>
+<td>CBERS-4</td>
+<td>2.411486</td>
+<td>2.411486</td>
+<td>ÁREA DE PROTEÇÃO AMBIENTAL DAS NASCENTES DO RI...</td>
+<td>2.411486</td>
+<td>Posse</td>
+<td>GO</td>
+<td>2020-05-01</td>
+</tr>
+<tr>
+<th>1</th>
+<td>MULTIPOLYGON (((-46.217 -14.2624, -46.2151 -14...</td>
+<td>17835_curr</td>
+<td>DESMATAMENTO_CR</td>
+<td>None</td>
+<td>154_117</td>
+<td>2020-04-21</td>
+<td>2020-04-23</td>
+<td>AWFI</td>
+<td>CBERS-4</td>
+<td>0.767338</td>
+<td>0.767338</td>
+<td>ÁREA DE PROTEÇÃO AMBIENTAL DAS NASCENTES DO RI...</td>
+<td>0.767338</td>
+<td>Posse</td>
+<td>GO</td>
+<td>2020-04-01</td>
+</tr>
+<tr>
+<th>2</th>
+<td>MULTIPOLYGON (((-46.2327 -14.2259, -46.2309 -1...</td>
+<td>47131_curr</td>
+<td>DESMATAMENTO_CR</td>
+<td>None</td>
+<td>157_117</td>
+<td>2020-11-06</td>
+<td>2020-11-09</td>
+<td>AWFI</td>
+<td>CBERS-4</td>
+<td>0.134493</td>
+<td>0.134493</td>
+<td>ÁREA DE PROTEÇÃO AMBIENTAL DAS NASCENTES DO RI...</td>
+<td>0.134493</td>
+<td>Posse</td>
+<td>GO</td>
+<td>2020-11-01</td>
+</tr>
+<tr>
+<th>3</th>
+<td>MULTIPOLYGON (((-46.5942 -14.344, -46.5936 -14...</td>
+<td>48252_curr</td>
+<td>DESMATAMENTO_CR</td>
+<td>None</td>
+<td>153_117</td>
+<td>2020-12-14</td>
+<td>2020-12-15</td>
+<td>AWFI</td>
+<td>CBERS-4</td>
+<td>0.357437</td>
+<td>0.000000</td>
+<td>None</td>
+<td>0.357437</td>
+<td>Posse</td>
+<td>GO</td>
+<td>2020-12-01</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 </div>
@@ -1152,8 +1267,85 @@ getAlerts(spatial_filter=5002308) </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>'Not connected to DETER database.'</pre>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>geometry</th>
+<th>gid</th>
+<th>classname</th>
+<th>quadrant</th>
+<th>path_row</th>
+<th>view_date</th>
+<th>created_date</th>
+<th>sensor</th>
+<th>satellite</th>
+<th>areatotalkm</th>
+<th>areauckm</th>
+<th>uc</th>
+<th>areamunkm</th>
+<th>municipality</th>
+<th>uf</th>
+<th>publish_month</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>MULTIPOLYGON (((-53 -20.7244, -53 -20.7289, -5...</td>
+<td>4801_curr</td>
+<td>DESMATAMENTO_CR</td>
+<td>None</td>
+<td>161_123</td>
+<td>2021-01-11</td>
+<td>2021-01-12</td>
+<td>AWFI</td>
+<td>CBERS-4</td>
+<td>0.247987</td>
+<td>0</td>
+<td>None</td>
+<td>0.247987</td>
+<td>Brasilândia</td>
+<td>MS</td>
+<td>2021-01-01</td>
+</tr>
+<tr>
+<th>1</th>
+<td>MULTIPOLYGON (((-52.9896 -20.7255, -52.9949 -2...</td>
+<td>4822_curr</td>
+<td>DESMATAMENTO_CR</td>
+<td>None</td>
+<td>161_123</td>
+<td>2021-01-11</td>
+<td>2021-01-12</td>
+<td>AWFI</td>
+<td>CBERS-4</td>
+<td>0.643993</td>
+<td>0</td>
+<td>None</td>
+<td>0.643993</td>
+<td>Brasilândia</td>
+<td>MS</td>
+<td>2021-01-01</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 </div>
@@ -1193,8 +1385,180 @@ getAlerts(spatial_filter = [-53.5,-21,-53,-20.5])</div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>'Not connected to DETER database.'</pre>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>geometry</th>
+<th>gid</th>
+<th>classname</th>
+<th>quadrant</th>
+<th>path_row</th>
+<th>view_date</th>
+<th>created_date</th>
+<th>sensor</th>
+<th>satellite</th>
+<th>areatotalkm</th>
+<th>areauckm</th>
+<th>uc</th>
+<th>areamunkm</th>
+<th>municipality</th>
+<th>uf</th>
+<th>publish_month</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>MULTIPOLYGON (((-53.2905 -20.8045, -53.2772 -2...</td>
+<td>2313_curr</td>
+<td>DESMATAMENTO_CR</td>
+<td>None</td>
+<td>159_123</td>
+<td>2021-06-22</td>
+<td>2021-06-23</td>
+<td>AWFI</td>
+<td>CBERS-4</td>
+<td>0.471142</td>
+<td>0</td>
+<td>None</td>
+<td>0.471142</td>
+<td>Ribas do Rio Pardo</td>
+<td>MS</td>
+<td>2021-06-01</td>
+</tr>
+<tr>
+<th>1</th>
+<td>MULTIPOLYGON (((-53.2917 -20.8114, -53.2895 -2...</td>
+<td>3720_curr</td>
+<td>DESMATAMENTO_CR</td>
+<td>None</td>
+<td>162_123</td>
+<td>2021-04-22</td>
+<td>2021-04-23</td>
+<td>AWFI</td>
+<td>CBERS-4</td>
+<td>0.585739</td>
+<td>0</td>
+<td>None</td>
+<td>0.585739</td>
+<td>Ribas do Rio Pardo</td>
+<td>MS</td>
+<td>2021-04-01</td>
+</tr>
+<tr>
+<th>2</th>
+<td>MULTIPOLYGON (((-53.2908 -20.8092, -53.2833 -2...</td>
+<td>4283_curr</td>
+<td>DESMATAMENTO_CR</td>
+<td>None</td>
+<td>165_123</td>
+<td>2021-05-09</td>
+<td>2021-05-10</td>
+<td>AWFI</td>
+<td>CBERS-4</td>
+<td>0.438399</td>
+<td>0</td>
+<td>None</td>
+<td>0.438399</td>
+<td>Ribas do Rio Pardo</td>
+<td>MS</td>
+<td>2021-05-01</td>
+</tr>
+<tr>
+<th>3</th>
+<td>MULTIPOLYGON (((-53 -20.7244, -53 -20.7289, -5...</td>
+<td>4801_curr</td>
+<td>DESMATAMENTO_CR</td>
+<td>None</td>
+<td>161_123</td>
+<td>2021-01-11</td>
+<td>2021-01-12</td>
+<td>AWFI</td>
+<td>CBERS-4</td>
+<td>0.247987</td>
+<td>0</td>
+<td>None</td>
+<td>0.247987</td>
+<td>Brasilândia</td>
+<td>MS</td>
+<td>2021-01-01</td>
+</tr>
+<tr>
+<th>4</th>
+<td>MULTIPOLYGON (((-52.9896 -20.7255, -52.9949 -2...</td>
+<td>4822_curr</td>
+<td>DESMATAMENTO_CR</td>
+<td>None</td>
+<td>161_123</td>
+<td>2021-01-11</td>
+<td>2021-01-12</td>
+<td>AWFI</td>
+<td>CBERS-4</td>
+<td>0.643993</td>
+<td>0</td>
+<td>None</td>
+<td>0.643993</td>
+<td>Brasilândia</td>
+<td>MS</td>
+<td>2021-01-01</td>
+</tr>
+<tr>
+<th>5</th>
+<td>MULTIPOLYGON (((-53.2891 -20.8073, -53.2816 -2...</td>
+<td>612_curr</td>
+<td>DESMATAMENTO_CR</td>
+<td>None</td>
+<td>160_123</td>
+<td>2021-05-24</td>
+<td>2021-05-25</td>
+<td>AWFI</td>
+<td>CBERS-4</td>
+<td>0.423397</td>
+<td>0</td>
+<td>None</td>
+<td>0.423397</td>
+<td>Ribas do Rio Pardo</td>
+<td>MS</td>
+<td>2021-05-01</td>
+</tr>
+<tr>
+<th>6</th>
+<td>MULTIPOLYGON (((-53.0951 -20.7575, -53.0942 -2...</td>
+<td>613_curr</td>
+<td>DESMATAMENTO_CR</td>
+<td>None</td>
+<td>160_123</td>
+<td>2021-05-24</td>
+<td>2021-05-25</td>
+<td>AWFI</td>
+<td>CBERS-4</td>
+<td>0.065829</td>
+<td>0</td>
+<td>None</td>
+<td>0.065829</td>
+<td>Santa Rita do Pardo</td>
+<td>MS</td>
+<td>2021-05-01</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 </div>
@@ -1234,8 +1598,66 @@ getAlerts(spatial_filter = 'POLYGON ((-46.3 -14.3, -46.2 -14.2, -46.2 -14.3, -46
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>'Not connected to DETER database.'</pre>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>geometry</th>
+<th>gid</th>
+<th>classname</th>
+<th>quadrant</th>
+<th>path_row</th>
+<th>view_date</th>
+<th>created_date</th>
+<th>sensor</th>
+<th>satellite</th>
+<th>areatotalkm</th>
+<th>areauckm</th>
+<th>uc</th>
+<th>areamunkm</th>
+<th>municipality</th>
+<th>uf</th>
+<th>publish_month</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>MULTIPOLYGON (((-46.2746 -14.2509, -46.265 -14...</td>
+<td>1182_curr</td>
+<td>DESMATAMENTO_CR</td>
+<td>None</td>
+<td>160_117</td>
+<td>2021-10-27</td>
+<td>2021-10-29</td>
+<td>AWFI</td>
+<td>CBERS-4</td>
+<td>2.792003</td>
+<td>2.792003</td>
+<td>ÁREA DE PROTEÇÃO AMBIENTAL DAS NASCENTES DO RI...</td>
+<td>2.792003</td>
+<td>Posse</td>
+<td>GO</td>
+<td>2021-10-01</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 </div>
@@ -1276,7 +1698,7 @@ connectDeter('Amazonia')</div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Please, enter a valid database (currently, only 'Amazonia' or 'Cerrado' are allowed).
+<pre>Connected to DETER Amazonia WFS.
 </pre>
 </div>
 </div>
@@ -1315,8 +1737,532 @@ connectDeter('Amazonia')</div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>'Not connected to DETER database.'</pre>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>geometry</th>
+<th>gid</th>
+<th>classname</th>
+<th>quadrant</th>
+<th>path_row</th>
+<th>view_date</th>
+<th>sensor</th>
+<th>satellite</th>
+<th>areauckm</th>
+<th>uc</th>
+<th>areamunkm</th>
+<th>municipality</th>
+<th>mun_geocod</th>
+<th>uf</th>
+<th>publish_month</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>MULTIPOLYGON (((-61.4011 -9.082, -61.4006 -9.0...</td>
+<td>106870_hist</td>
+<td>DEGRADACAO</td>
+<td>None</td>
+<td>175111</td>
+<td>2021-06-26</td>
+<td>AWFI</td>
+<td>CBERS-4</td>
+<td>0</td>
+<td>None</td>
+<td>0.189215</td>
+<td>Colniza</td>
+<td>5103254</td>
+<td>MT</td>
+<td>2021-06-01</td>
+</tr>
+<tr>
+<th>1</th>
+<td>MULTIPOLYGON (((-59.6824 -9.3212, -59.6786 -9....</td>
+<td>42627_hist</td>
+<td>DEGRADACAO</td>
+<td>None</td>
+<td>174111</td>
+<td>2021-01-24</td>
+<td>AWFI</td>
+<td>CBERS-4</td>
+<td>0</td>
+<td>None</td>
+<td>0.354477</td>
+<td>Colniza</td>
+<td>5103254</td>
+<td>MT</td>
+<td>2021-01-01</td>
+</tr>
+<tr>
+<th>2</th>
+<td>MULTIPOLYGON (((-61.3812 -9.0849, -61.3795 -9....</td>
+<td>42947_hist</td>
+<td>DEGRADACAO</td>
+<td>None</td>
+<td>171111</td>
+<td>2021-02-02</td>
+<td>AWFI</td>
+<td>CBERS-4</td>
+<td>0</td>
+<td>None</td>
+<td>0.140215</td>
+<td>Colniza</td>
+<td>5103254</td>
+<td>MT</td>
+<td>2021-02-01</td>
+</tr>
+<tr>
+<th>3</th>
+<td>MULTIPOLYGON (((-60.5507 -9.0182, -60.5483 -9....</td>
+<td>46759_hist</td>
+<td>DEGRADACAO</td>
+<td>None</td>
+<td>170111</td>
+<td>2021-04-24</td>
+<td>AWFI</td>
+<td>CBERS-4</td>
+<td>0</td>
+<td>None</td>
+<td>1.877095</td>
+<td>Colniza</td>
+<td>5103254</td>
+<td>MT</td>
+<td>2021-04-01</td>
+</tr>
+<tr>
+<th>4</th>
+<td>MULTIPOLYGON (((-60.5583 -9.0143, -60.5583 -9....</td>
+<td>46778_hist</td>
+<td>DEGRADACAO</td>
+<td>None</td>
+<td>170111</td>
+<td>2021-04-24</td>
+<td>AWFI</td>
+<td>CBERS-4</td>
+<td>0</td>
+<td>None</td>
+<td>0.621669</td>
+<td>Colniza</td>
+<td>5103254</td>
+<td>MT</td>
+<td>2021-04-01</td>
+</tr>
+<tr>
+<th>5</th>
+<td>MULTIPOLYGON (((-60.4512 -9.0583, -60.4512 -9....</td>
+<td>47729_hist</td>
+<td>DEGRADACAO</td>
+<td>None</td>
+<td>175111</td>
+<td>2021-05-05</td>
+<td>AWFI</td>
+<td>CBERS-4</td>
+<td>0</td>
+<td>None</td>
+<td>0.359186</td>
+<td>Colniza</td>
+<td>5103254</td>
+<td>MT</td>
+<td>2021-05-01</td>
+</tr>
+<tr>
+<th>6</th>
+<td>MULTIPOLYGON (((-60.8067 -9.1823, -60.8059 -9....</td>
+<td>48872_hist</td>
+<td>DEGRADACAO</td>
+<td>None</td>
+<td>173111</td>
+<td>2021-05-11</td>
+<td>AWFI</td>
+<td>CBERS-4</td>
+<td>0</td>
+<td>None</td>
+<td>0.155120</td>
+<td>Colniza</td>
+<td>5103254</td>
+<td>MT</td>
+<td>2021-05-01</td>
+</tr>
+<tr>
+<th>7</th>
+<td>MULTIPOLYGON (((-59.7492 -9.514, -59.7492 -9.5...</td>
+<td>48890_hist</td>
+<td>DEGRADACAO</td>
+<td>None</td>
+<td>173111</td>
+<td>2021-05-11</td>
+<td>AWFI</td>
+<td>CBERS-4</td>
+<td>0</td>
+<td>None</td>
+<td>0.346146</td>
+<td>Colniza</td>
+<td>5103254</td>
+<td>MT</td>
+<td>2021-05-01</td>
+</tr>
+<tr>
+<th>8</th>
+<td>MULTIPOLYGON (((-59.1024 -9.3599, -59.1024 -9....</td>
+<td>48960_hist</td>
+<td>DEGRADACAO</td>
+<td>None</td>
+<td>173111</td>
+<td>2021-05-11</td>
+<td>AWFI</td>
+<td>CBERS-4</td>
+<td>0</td>
+<td>None</td>
+<td>0.172919</td>
+<td>Colniza</td>
+<td>5103254</td>
+<td>MT</td>
+<td>2021-05-01</td>
+</tr>
+<tr>
+<th>9</th>
+<td>MULTIPOLYGON (((-60.2865 -9.2041, -60.2858 -9....</td>
+<td>49226_hist</td>
+<td>DEGRADACAO</td>
+<td>None</td>
+<td>172111</td>
+<td>2021-05-14</td>
+<td>AWFI</td>
+<td>CBERS-4</td>
+<td>0</td>
+<td>None</td>
+<td>0.646394</td>
+<td>Colniza</td>
+<td>5103254</td>
+<td>MT</td>
+<td>2021-05-01</td>
+</tr>
+<tr>
+<th>10</th>
+<td>MULTIPOLYGON (((-60.3997 -9.1976, -60.3976 -9....</td>
+<td>49227_hist</td>
+<td>DEGRADACAO</td>
+<td>None</td>
+<td>172111</td>
+<td>2021-05-14</td>
+<td>AWFI</td>
+<td>CBERS-4</td>
+<td>0</td>
+<td>None</td>
+<td>0.168824</td>
+<td>Colniza</td>
+<td>5103254</td>
+<td>MT</td>
+<td>2021-05-01</td>
+</tr>
+<tr>
+<th>11</th>
+<td>MULTIPOLYGON (((-60.8117 -9.2366, -60.8115 -9....</td>
+<td>49229_hist</td>
+<td>DEGRADACAO</td>
+<td>None</td>
+<td>172111</td>
+<td>2021-05-14</td>
+<td>AWFI</td>
+<td>CBERS-4</td>
+<td>0</td>
+<td>None</td>
+<td>0.135321</td>
+<td>Colniza</td>
+<td>5103254</td>
+<td>MT</td>
+<td>2021-05-01</td>
+</tr>
+<tr>
+<th>12</th>
+<td>MULTIPOLYGON (((-60.8135 -9.2288, -60.817 -9.2...</td>
+<td>49233_hist</td>
+<td>DEGRADACAO</td>
+<td>None</td>
+<td>172111</td>
+<td>2021-05-14</td>
+<td>AWFI</td>
+<td>CBERS-4</td>
+<td>0</td>
+<td>None</td>
+<td>0.073369</td>
+<td>Colniza</td>
+<td>5103254</td>
+<td>MT</td>
+<td>2021-05-01</td>
+</tr>
+<tr>
+<th>13</th>
+<td>MULTIPOLYGON (((-59.1279 -9.7731, -59.1256 -9....</td>
+<td>49321_hist</td>
+<td>DEGRADACAO</td>
+<td>None</td>
+<td>172111</td>
+<td>2021-05-14</td>
+<td>AWFI</td>
+<td>CBERS-4</td>
+<td>0</td>
+<td>None</td>
+<td>0.123556</td>
+<td>Colniza</td>
+<td>5103254</td>
+<td>MT</td>
+<td>2021-05-01</td>
+</tr>
+<tr>
+<th>14</th>
+<td>MULTIPOLYGON (((-60.359 -9.1745, -60.359 -9.17...</td>
+<td>50206_hist</td>
+<td>DEGRADACAO</td>
+<td>None</td>
+<td>225124</td>
+<td>2021-05-18</td>
+<td>WFI</td>
+<td>CBERS-4A</td>
+<td>0</td>
+<td>None</td>
+<td>0.126945</td>
+<td>Colniza</td>
+<td>5103254</td>
+<td>MT</td>
+<td>2021-05-01</td>
+</tr>
+<tr>
+<th>15</th>
+<td>MULTIPOLYGON (((-60.787 -9.25, -60.787 -9.2499...</td>
+<td>50207_hist</td>
+<td>DEGRADACAO</td>
+<td>None</td>
+<td>225124</td>
+<td>2021-05-18</td>
+<td>WFI</td>
+<td>CBERS-4A</td>
+<td>0</td>
+<td>None</td>
+<td>0.122513</td>
+<td>Colniza</td>
+<td>5103254</td>
+<td>MT</td>
+<td>2021-05-01</td>
+</tr>
+<tr>
+<th>16</th>
+<td>MULTIPOLYGON (((-60.7881 -9.2574, -60.7881 -9....</td>
+<td>50208_hist</td>
+<td>DEGRADACAO</td>
+<td>None</td>
+<td>225124</td>
+<td>2021-05-18</td>
+<td>WFI</td>
+<td>CBERS-4A</td>
+<td>0</td>
+<td>None</td>
+<td>0.122369</td>
+<td>Colniza</td>
+<td>5103254</td>
+<td>MT</td>
+<td>2021-05-01</td>
+</tr>
+<tr>
+<th>17</th>
+<td>MULTIPOLYGON (((-59.0658 -9.2859, -59.0657 -9....</td>
+<td>53263_hist</td>
+<td>DEGRADACAO</td>
+<td>None</td>
+<td>167111</td>
+<td>2021-05-29</td>
+<td>AWFI</td>
+<td>CBERS-4</td>
+<td>0</td>
+<td>None</td>
+<td>0.109871</td>
+<td>Colniza</td>
+<td>5103254</td>
+<td>MT</td>
+<td>2021-05-01</td>
+</tr>
+<tr>
+<th>18</th>
+<td>MULTIPOLYGON (((-60.7927 -9.2474, -60.7894 -9....</td>
+<td>54094_hist</td>
+<td>DEGRADACAO</td>
+<td>None</td>
+<td>175111</td>
+<td>2021-05-31</td>
+<td>AWFI</td>
+<td>CBERS-4</td>
+<td>0</td>
+<td>None</td>
+<td>0.302525</td>
+<td>Colniza</td>
+<td>5103254</td>
+<td>MT</td>
+<td>2021-05-01</td>
+</tr>
+<tr>
+<th>19</th>
+<td>MULTIPOLYGON (((-61.3974 -9.0736, -61.3974 -9....</td>
+<td>56021_hist</td>
+<td>DEGRADACAO</td>
+<td>None</td>
+<td>174111</td>
+<td>2021-06-03</td>
+<td>AWFI</td>
+<td>CBERS-4</td>
+<td>0</td>
+<td>None</td>
+<td>0.366932</td>
+<td>Colniza</td>
+<td>5103254</td>
+<td>MT</td>
+<td>2021-06-01</td>
+</tr>
+<tr>
+<th>20</th>
+<td>MULTIPOLYGON (((-60.5248 -9.0183, -60.5244 -9....</td>
+<td>56146_hist</td>
+<td>DEGRADACAO</td>
+<td>None</td>
+<td>174111</td>
+<td>2021-06-03</td>
+<td>AWFI</td>
+<td>CBERS-4</td>
+<td>0</td>
+<td>None</td>
+<td>0.831962</td>
+<td>Colniza</td>
+<td>5103254</td>
+<td>MT</td>
+<td>2021-06-01</td>
+</tr>
+<tr>
+<th>21</th>
+<td>MULTIPOLYGON (((-60.5832 -9.0339, -60.582 -9.0...</td>
+<td>56231_hist</td>
+<td>DEGRADACAO</td>
+<td>None</td>
+<td>174111</td>
+<td>2021-06-03</td>
+<td>AWFI</td>
+<td>CBERS-4</td>
+<td>0</td>
+<td>None</td>
+<td>0.858020</td>
+<td>Colniza</td>
+<td>5103254</td>
+<td>MT</td>
+<td>2021-06-01</td>
+</tr>
+<tr>
+<th>22</th>
+<td>MULTIPOLYGON (((-60.791 -9.1974, -60.791 -9.19...</td>
+<td>58102_hist</td>
+<td>DEGRADACAO</td>
+<td>None</td>
+<td>170111</td>
+<td>2021-06-15</td>
+<td>AWFI</td>
+<td>CBERS-4</td>
+<td>0</td>
+<td>None</td>
+<td>0.144656</td>
+<td>Colniza</td>
+<td>5103254</td>
+<td>MT</td>
+<td>2021-06-01</td>
+</tr>
+<tr>
+<th>23</th>
+<td>MULTIPOLYGON (((-59.3434 -9.576, -59.3434 -9.5...</td>
+<td>60011_hist</td>
+<td>DEGRADACAO</td>
+<td>None</td>
+<td>167111</td>
+<td>2021-06-24</td>
+<td>AWFI</td>
+<td>CBERS-4</td>
+<td>0</td>
+<td>None</td>
+<td>0.266369</td>
+<td>Colniza</td>
+<td>5103254</td>
+<td>MT</td>
+<td>2021-06-01</td>
+</tr>
+<tr>
+<th>24</th>
+<td>MULTIPOLYGON (((-59.3565 -9.5885, -59.3564 -9....</td>
+<td>60038_hist</td>
+<td>DEGRADACAO</td>
+<td>None</td>
+<td>167111</td>
+<td>2021-06-24</td>
+<td>AWFI</td>
+<td>CBERS-4</td>
+<td>0</td>
+<td>None</td>
+<td>0.300855</td>
+<td>Colniza</td>
+<td>5103254</td>
+<td>MT</td>
+<td>2021-06-01</td>
+</tr>
+<tr>
+<th>25</th>
+<td>MULTIPOLYGON (((-60.4581 -9.0584, -60.4569 -9....</td>
+<td>61045_hist</td>
+<td>DEGRADACAO</td>
+<td>None</td>
+<td>225124</td>
+<td>2021-05-18</td>
+<td>WFI</td>
+<td>CBERS-4A</td>
+<td>0</td>
+<td>None</td>
+<td>0.304769</td>
+<td>Colniza</td>
+<td>5103254</td>
+<td>MT</td>
+<td>2021-05-01</td>
+</tr>
+<tr>
+<th>26</th>
+<td>MULTIPOLYGON (((-60.7972 -9.182, -60.7972 -9.1...</td>
+<td>71851_hist</td>
+<td>DEGRADACAO</td>
+<td>None</td>
+<td>175111</td>
+<td>2021-05-31</td>
+<td>AWFI</td>
+<td>CBERS-4</td>
+<td>0</td>
+<td>None</td>
+<td>0.079832</td>
+<td>Colniza</td>
+<td>5103254</td>
+<td>MT</td>
+<td>2021-05-01</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 </div>
