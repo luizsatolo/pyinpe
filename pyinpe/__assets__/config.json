@@ -17,7 +17,7 @@
     "DETER_DATE_VAR": "view_date",
     "DETER_ID_VAR": "gid",
     "QUEIMADAS_GEOSERVER": "queimadas/geoserver/dados_abertos/",
-    "QUEIMADAS_GEOCODE_VAR": "id2",
+    "QUEIMADAS_GEOCODE_VAR": "id_2",
     "QUEIMADAS_CITY_VAR": "municipio",
     "QUEIMADAS_STATE_VAR": "estado",
     "QUEIMADAS_GEOMETRY_VAR": "geometria",

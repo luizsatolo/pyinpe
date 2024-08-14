@@ -29,8 +29,8 @@ class Deter:
     def __str__(self):
       global request_url 
       try:
-        url = 'https://terrabrasilis.dpi.inpe.br/geoserver/'+self.collection+'/wfs?service=WFS&version=2.0.0&request=GetCapabilities'
-        #url = config['TERRABRASILIS_URL']+config['DETER_GEOSERVER']+self.collection+config['GETCAPABILITIES_REQUEST']
+        #url = 'https://terrabrasilis.dpi.inpe.br/geoserver/'+self.collection+'/wfs?service=WFS&version=2.0.0&request=GetCapabilities'
+        url = config['TERRABRASILIS_URL']+config['DETER_GEOSERVER']+self.collection+config['GETCAPABILITIES_REQUEST']
         r = requests.get(url)
         if r.status_code == 200:
           request_url = 'https://terrabrasilis.dpi.inpe.br/geoserver/'+self.collection+'/wfs?service=WFS&version=2.0.0&srsName=EPSG:4326&request=GetFeature&typeName='+self.layer
