@@ -26,10 +26,10 @@ class Deter:
     def __str__(self):
       global request_url
       try:
-        url = 'https://0ab5cc7fe29bc6.lhr.life/?f=json&lang=en-US'
+        url = config['API_URL']+'?f=json&lang=en-US'
         r = requests.get(url)
         if r.status_code == 200:
-          request_url = 'https://0ab5cc7fe29bc6.lhr.life/collections/'+self.collection+'/items?f=json&sortby=view_date&startIndex=0&lang=en-US&limit=1000000&additionalProp1=%7B%7D&skipGeometry=false&offset=0&filter-lang=cql-text&filter='
+          request_url = config['API_URL']+'collections/'+self.collection+'/items?f=json&sortby='+config['DETER_DATE_VAR']+'&startIndex=0&lang=en-US&limit=1000000&additionalProp1=%7B%7D&skipGeometry=false&offset=0&filter-lang=cql-text&filter='
           return f"Connected to DETER {self.database} OGC API Features."
         else:
           request_url = None
@@ -69,11 +69,11 @@ def getAlerts(spatial_filter: int|str|list|None = None, temporal_filter: str = [
       df_geocode = pd.read_csv(CSV_FILE, index_col = 'index').reset_index(drop = True)
       city = df_geocode.NM_MUN[df_geocode.CD_MUN == get_location].item()
       uf = df_geocode.SIGLA_UF[df_geocode.CD_MUN == get_location].item()
-      location = 'municipali=%27'+city+'%27%20AND%20uf=%27'+uf+'%27'
+      location = config['API_DETER_CITY_VAR']+'=%27'+city+'%27%20AND%20'+config['DETER_STATE_VAR']+'=%27'+uf+'%27'
     elif isinstance(get_location, str):
       if ' - ' in get_location:
         spatial_query = 'city_name'
-        location = 'municipali=%27'+get_location.split('-')[0].strip().upper()+'%27%20AND%20uf=%27'+get_location.split('-')[1].strip()+'%27'
+        location = config['API_DETER_CITY_VAR']+'=%27'+get_location.split('-')[0].strip().upper()+'%27%20AND%20'+config['DETER_STATE_VAR']++'=%27'+get_location.split('-')[1].strip()+'%27'
       elif 'POLYGON' in get_location:
         spatial_query = 'polygon'
         location = 'WITHIN(geometry,'+get_location+')'
@@ -90,13 +90,13 @@ def getAlerts(spatial_filter: int|str|list|None = None, temporal_filter: str = [
     end_date = temporal_filter[1]
     get_type = alert_type
     if get_type == 'degradation':
-      get_classname = '%20AND%20classname=%27DEGRADACAO%27'
+      get_classname = '%20AND%20'+config['DETER_TYPE_VAR']+'=%27'+config['DETER_DEGRADATION_TYPE']+'%27'
     elif get_type == 'deforestation':
-      get_classname = '%20AND%20classname=%27DESMATAMENTO_CR%27%20OR%20classname=%27DESMATAMENTO_VEG%27'
+      get_classname = '%20AND%20'+config['DETER_TYPE_VAR']+'=%27'+config['DETER_DEFORESTATION_TYPE1']+'%27%20OR%20'+config['DETER_TYPE_VAR']+'=%27'+config['DETER_DEFORESTATION_TYPE2']+'%27'
     else:
       get_classname = ''
     try:
-      url = request_url+location+get_classname+'%20AND%20view_date%20DURING%20'+start_date+'T00:00:00Z/'+end_date+'T23:59:59Z'
+      url = request_url+location+get_classname+'%20AND%20'+config['DETER_DATE_VAR']+'%20DURING%20'+start_date+'T00:00:00Z/'+end_date+'T23:59:59Z'
       r = requests.get(url)
       j = r.json()
       df = gpd.GeoDataFrame.from_features(j)
@@ -113,10 +113,10 @@ class Queimadas:
   def __str__(self):
     global request_url
     try:
-      url = 'https://4ead9e226aeba8.lhr.life/?f=json&lang=en-US'
+      url = config['API_URL']+'?f=json&lang=en-US'
       r = requests.get(url)
       if r.status_code == 200:
-        request_url = 'https://4ead9e226aeba8.lhr.life/collections/queimadas_foco/items?f=json&sortby=datahora&startIndex=0&lang=en-US&limit=1000000&additionalProp1=%7B%7D&skipGeometry=false&offset=0&filter-lang=cql-text&filter=satelite=%27AQUA_M-T%27%20AND%20'
+        request_url = config['API_URL']+'collections/'+config['API_QUEIMADAS_COLLECTION']+'/items?f=json&sortby='+config['API_QUEIMADAS_DATE_VAR']+'&startIndex=0&lang=en-US&limit=1000000&additionalProp1=%7B%7D&skipGeometry=false&offset=0&filter-lang=cql-text&filter=satelite=%27'+config['API_QUEIMADAS_SATELLITE']+'%27%20AND%20'
         return f"Connected to {self.database} OGC API Features."
       else:
         request_url = None
@@ -156,12 +156,12 @@ def getFires(spatial_filter: int|str|list|None = None, temporal_filter: str = ['
       df_geocode = pd.read_csv(CSV_FILE, index_col = 'index').reset_index(drop = True)
       city = df_geocode.NM_MUN[df_geocode.CD_MUN == get_location].item()
       uf = df_geocode.SIGLA_UF[df_geocode.CD_MUN == get_location].item()
-      location = 'municipio=%27'+city+'%27%20AND%20estado=%27'+uf+'%27'
+      location = config['QUEIMADAS_CITY_VAR']+'=%27'+city+'%27%20AND%20'+config['QUEIMADAS_STATE_VAR']+'=%27'+uf+'%27'
     elif isinstance(get_location, str):
       if ' - ' in get_location:
         spatial_query = 'city_name'
         uf = df_estado.estado[df_estado.sigla == get_location.split('-')[1].strip()].item()
-        location = 'municipio=%27'+get_location.split('-')[0].strip().upper()+'%27%20AND%20estado=%27'+uf+'%27'
+        location = config['QUEIMADAS_CITY_VAR']+'=%27'+get_location.split('-')[0].strip().upper()+'%27%20AND%20'+config['QUEIMADAS_STATE_VAR']+'=%27'+uf+'%27'
       elif 'POLYGON' in get_location:
         spatial_query = 'polygon'
         location = 'WITHIN(geometry,'+get_location+')'
@@ -180,7 +180,7 @@ def getFires(spatial_filter: int|str|list|None = None, temporal_filter: str = ['
     end_year = end_date[:4]
 
     try:
-      url = request_url+location+'%20AND%20datahora%20DURING%20'+start_date+'T00:00:00Z/'+end_date+'T23:59:59Z'
+      url = request_url+location+'%20AND%20'+config['API_QUEIMADAS_DATE_VAR']+'%20DURING%20'+start_date+'T00:00:00Z/'+end_date+'T23:59:59Z'
       r = requests.get(url)
       j = r.json()
       df = gpd.GeoDataFrame.from_features(j)
