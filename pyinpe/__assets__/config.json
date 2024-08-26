@@ -26,5 +26,10 @@
     "QUEIMADAS_LAYER_END": "_br_satref",
     "QUEIMADAS_DATE_VAR": "data_hora_gmt",
     "QUEIMADAS_RESPONSE_COLUMNS": "[geometry, id_foco_bdq, foco_id, longitude, latitude, data_hora_gmt, data_pas, satelite, municipio, estado, pais, precipitacao, numero_dias_sem_chuva, risco_fogo, bioma, id_0, id_1, id_2, continente_id, vegetacao, frp, bbox]",
-    "QUEIMADAS_RESPONSE_GEOMETRY": "geometry"
+    "QUEIMADAS_RESPONSE_GEOMETRY": "geometry",
+    "API_URL": "https://4ead9e226aeba8.lhr.life/",
+    "API_DETER_CITY_VAR": "municipali",
+    "API_QUEIMADAS_COLLECTION": "queimadas_foco",
+    "API_QUEIMADAS_DATE_VAR": "datahora",
+    "API_QUEIMADAS_SATELLITE": "AQUA_M-T"
   }
