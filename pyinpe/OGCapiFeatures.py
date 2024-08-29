@@ -3,6 +3,7 @@ import geopandas as gpd
 import shapely as shp
 import pkg_resources
 import pandas as pd
+import numpy as np
 import warnings
 import json
 
@@ -63,7 +64,7 @@ def getAlerts(spatial_filter: int|str|list|None = None, temporal_filter: str = [
     return f"Not connected to any database."
   else:
     get_location = spatial_filter
-    if isinstance(get_location, int):
+    if isinstance(get_location, (int, np.int64)):
       spatial_query = 'geocode'
       CSV_FILE = pkg_resources.resource_filename('pyinpe', '__assets__/geocode.csv')
       df_geocode = pd.read_csv(CSV_FILE, index_col = 'index').reset_index(drop = True)
@@ -150,7 +151,7 @@ def getFires(spatial_filter: int|str|list|None = None, temporal_filter: str = ['
     df_estado = pd.DataFrame({'estado': ['ACRE', 'ALAGOAS', 'AMAPÁ', 'AMAZONAS', 'BAHIA', 'CEARÁ', 'DISTRITO FEDERAL', 'ESPÍRITO SANTO', 'GOIÁS', 'MARANHÃO', 'MATO GROSSO', 'MATO GROSSO DO SUL', 'MINAS GERAIS', 'PARÁ', 'PARAÍBA', 'PARANÁ', 'PERNAMBUCO', 'PIAUÍ', 'RIO DE JANEIRO', 'RIO GRANDE DO NORTE', 'RIO GRANDE DO SUL', 'RONDÔNIA', 'RORAIMA', 'SANTA CATARINA', 'SÃO PAULO', 'SERGIPE', 'TOCANTINS'],
                               'sigla': ['AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MT', 'MS', 'MG', 'PA', 'PB', 'PR', 'PE', 'PI', 'RJ', 'RN', 'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO']})
     get_location = spatial_filter
-    if isinstance(get_location, int):
+    if isinstance(get_location, (int, np.int64)):
       spatial_query = 'geocode'
       CSV_FILE = pkg_resources.resource_filename('pyinpe', '__assets__/geocode.csv')
       df_geocode = pd.read_csv(CSV_FILE, index_col = 'index').reset_index(drop = True)
