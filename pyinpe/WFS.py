@@ -28,7 +28,7 @@ class Deter:
         self.layer = "deter-amz:deter_amz"
 
     def __str__(self):
-      global request_url 
+      global request_url
       try:
         url = config['TERRABRASILIS_URL']+config['DETER_GEOSERVER']+self.collection+config['GETCAPABILITIES_REQUEST']
         r = requests.get(url)
@@ -111,7 +111,7 @@ def getAlerts(spatial_filter: int|str|list|None = None, temporal_filter: str = [
         return df
     except:
       return f"Invalid filters. Please, see the documentation for examples."
-    
+
 class Queimadas:
 
   def __init__(self):
@@ -184,10 +184,10 @@ def getFires(spatial_filter: int|str|list|None = None, temporal_filter: str = ['
     end_year = end_date[:4]
 
     df = gpd.GeoDataFrame(columns=config['QUEIMADAS_RESPONSE_COLUMNS'].strip('][').split(', '), geometry=config['QUEIMADAS_RESPONSE_GEOMETRY'])
-    
+
     try:
       for t in range(int(start_year), int(end_year)+1):
-        url = request_url+config['QUEIMADAS_LAYER_INIT']+str(t)+config['QUEIMADAS_LAYER_END']+'&CQL_FILTER='+location+config['QUEIMADAS_DATE_VAR']+'%20BETWEEN%20%27'+start_date+'%27%20AND%20%27'+end_date+'%27&outputFormat='+config['GETFEATURE_OUTPUT']
+        url = request_url+config['QUEIMADAS_LAYER_INIT']+str(t)+config['QUEIMADAS_LAYER_END']+'&CQL_FILTER=satelite=%27AQUA_M-T%27%20AND%20'+location+config['QUEIMADAS_DATE_VAR']+'%20BETWEEN%20%27'+start_date+'%27%20AND%20%27'+end_date+'%27&outputFormat='+config['GETFEATURE_OUTPUT']
         r = requests.get(url)
         j = r.json()
         temp_df = gpd.GeoDataFrame.from_features(j)
