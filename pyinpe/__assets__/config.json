@@ -1,4 +1,4 @@
-JSON_FILE ={
+{
   "TERRABRASILIS_URL": "https://terrabrasilis.dpi.inpe.br/",
   "GETCAPABILITIES_REQUEST": "/wfs?service=WFS&version=2.0.0&request=GetCapabilities",
   "GETFEATURE_REQUEST": "/wfs?service=WFS&version=2.0.0&srsName=EPSG:4326&request=GetFeature&typeName=",
