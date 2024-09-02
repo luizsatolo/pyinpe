@@ -11,8 +11,8 @@ warnings.simplefilter(action='ignore', category=FutureWarning)
 
 
 JSON_FILE = pkg_resources.resource_filename('pyinpe', '__assets__/config.json')
-with open(JSON_FILE) as config_file:
-    config = json.load(config_file)
+with open(JSON_FILE, 'r') as config_file:
+    config = json.loads(config_file.read())
 
 class Deter:
 
