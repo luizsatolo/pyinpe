@@ -3,4 +3,3 @@ requests
 shapely
 pandas
 numpy
-io
