@@ -3,3 +3,4 @@ requests
 shapely
 pandas
 numpy
+pyogrio

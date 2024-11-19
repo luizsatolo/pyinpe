@@ -1,5 +1,8 @@
 import pkg_resources
 import geopandas as gpd
+import pyogrio
+
+pyogrio.core._register_drivers()
 
 def load_shapefile():
     """Return a geodataframe with the polygon from a shapefile.
