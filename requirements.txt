@@ -3,4 +3,4 @@ requests
 shapely
 pandas
 numpy
-pyogrio
+fiona
