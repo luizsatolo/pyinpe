@@ -3,5 +3,4 @@ requests
 shapely
 pandas
 numpy
-zipfile
 io
