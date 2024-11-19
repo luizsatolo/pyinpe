@@ -1,4 +1,0 @@
- 
-# pyinpe module
-
-::: pyinpe.pyinpe
